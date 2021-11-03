@@ -16,7 +16,7 @@ public class Conexion {
             JOptionPane.showMessageDialog(null, "Error en drivers :  " + e);
         }
         try {
-            cnn = DriverManager.getConnection("jdbc:mysql://localhost/dbcementerio", "root", "238238");
+            cnn = DriverManager.getConnection("jdbc:mysql://localhost/DbCementerio", "root", "Maicol971225");
             //JOptionPane.showMessageDialog(null, "Conexión Establecida (:D)");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en nuestro local Host : " + e);
