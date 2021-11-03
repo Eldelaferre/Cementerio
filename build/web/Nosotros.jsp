@@ -9,9 +9,37 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="/css/Styles.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <title>Nosotros</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <header>
+        <section>
+            <a href="index.html" id="Logo">Cementerios</a>
+
+            <label for="menu-1" class="menu">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+                </ul>
+            </label>
+            <input type="checkbox" id="menu-1">
+
+            <nav>
+                <ul>
+                    <li><a href="Nosotros.jsp">Nosotros</a></li>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Aliados</a></li>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
     </body>
 </html>
