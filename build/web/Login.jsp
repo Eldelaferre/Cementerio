@@ -63,7 +63,7 @@
     
                 <button type="submit">Ingresar</button>
 
-                <a class="visitante" href="Usuario.html">No tengo cuenta, ir a Registro</a>
+                <a class="visitante" href="Usuario.jsp">No tengo cuenta, ir a Registro</a>
             </div>
     
     
