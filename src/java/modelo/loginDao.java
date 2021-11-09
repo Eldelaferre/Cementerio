@@ -24,7 +24,7 @@ public class loginDao {
         ps.setString(2, lo.getClave());
         rs=ps.executeQuery();
         if(rs.next()){
-            login log=new login(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            login log=new login(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
             lista.add(log);
         }
         } catch (SQLException ex) {

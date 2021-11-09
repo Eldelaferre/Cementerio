@@ -61,7 +61,7 @@
                 <input class="control" type="email" name="correo" id="cor" placeholder="Ingrese el correo">
 
 
-                <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="submit" value="Registrar">
+                <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="button" value="Registrar">
 
             </form>
 

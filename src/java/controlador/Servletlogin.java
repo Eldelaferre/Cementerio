@@ -67,6 +67,7 @@ public class Servletlogin extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
+        JOptionPane.showMessageDialog(null, "en el servlet");
         if(request.getParameter("btnlogin")!=null){
             ArrayList<login> lista=new ArrayList<>();
             String u,c,r,n,co;

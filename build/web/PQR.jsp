@@ -10,10 +10,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Js/jquery-3.6.0.min.js"></script>
+    <script src="Js/insertarPQRS.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Styles.css">
-    <title>Fromulario Registro certificacion</title>
+    <title>Formulario Registro certificacion</title>
 </head>
 <body>
     <!-- Parte del menú-->
@@ -49,13 +51,15 @@
 
     <!-- Contenido pagina principal -->
     <section class="registro">
-        <h4>Fromulario Registro certificacion</h4>
+        <form action="" method="POST">
+        <h4>Formulario Registro certificacion</h4>
         <input class="control" type="text" name="Codigo" id="Codigo" placeholder="Ingrese el codigo PQR">
         <input class="control" type="text" name="numero" id="numero" placeholder="Ingrese el codigo de registro del PQr">
         <p>Ingresa la fecha del PQR</p>
         <input class="control" type="date" name="fecha" id="fecha" placeholder="Ingrese la fecha del PQR">
         <input class="control" type="text" name="descripcion" id="descripcion" placeholder="Ingrese la descripcion del PQR">
-        <input class="boton" type="submit" value="Registrar">
+        <input class="boton" type="button" value="Registrar">
+        </form>
             
     </section>
     
