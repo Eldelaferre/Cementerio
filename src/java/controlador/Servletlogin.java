@@ -73,14 +73,14 @@ public class Servletlogin extends HttpServlet {
             int cod=0;
             u=request.getParameter("usuario");
             c=request.getParameter("clave");
-            JOptionPane.showMessageDialog(null, u+c);
+            //JOptionPane.showMessageDialog(null, u+c);
             r=request.getParameter("");
             n=request.getParameter("");
             login lo=new login(u, c);
             loginDao id=new loginDao();
             login datlo=new login(cod,r,u,c,n);
             lista=id.LoginDao(lo);
-            JOptionPane.showMessageDialog(null, lista);
+            //JOptionPane.showMessageDialog(null, lista);
             if(lista.size()>0){
             for(int i=0;i<lista.size();i++){
                 datlo=lista.get(i);
@@ -112,7 +112,7 @@ public class Servletlogin extends HttpServlet {
                         JOptionPane.showMessageDialog(null, datlo.getCodigo());
                         sesion.setAttribute("rol",datlo.getRol());
                         sesion.setAttribute("Codigo", datlo.getCodigo());
-                            response.sendRedirect("EspacioEmpleado.jsp");
+                            response.sendRedirect("index.jsp");
                         
                     }
             }
