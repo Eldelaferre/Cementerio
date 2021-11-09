@@ -1,7 +1,8 @@
+
 package modelo;
 
 public class login {
-
+    
     private int codigo;
     private String rol;
     private String usuario;
@@ -19,6 +20,7 @@ public class login {
         this.clave = clave;
         this.nombre = nombre;
     }
+    
 
     public login(int codigo, String rol, String usuario, String clave, String nombre) {
         this.codigo = codigo;
@@ -35,6 +37,9 @@ public class login {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+
+    
 
     public int getCodigo() {
         return codigo;
@@ -67,5 +72,6 @@ public class login {
     public void setClave(String clave) {
         this.clave = clave;
     }
-
+    
+    
 }

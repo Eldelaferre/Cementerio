@@ -1,3 +1,4 @@
+
 package modelo;
 
 import controlador.Conexion;
@@ -9,23 +10,23 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class loginDao {
-
-    Conexion con = new Conexion();
-    Connection cnn = con.conexionbd();
+    
+    Conexion con=new Conexion();
+    Connection cnn=con.conexionbd();
     PreparedStatement ps;
     ResultSet rs;
-
-    public ArrayList<login> LoginDao(login lo) {
-        ArrayList<login> lista = new ArrayList<>();
+    
+    public ArrayList<login> LoginDao(login lo){
+        ArrayList<login> lista =new ArrayList<>();
         try {
-            ps = cnn.prepareStatement("select Usua_codigo,Usua_rol,Usua_user,Usua_clave,Emple_nombre from Tbusuario inner join Tbempleado on (Emple_codigo=Usua_codigo) where Usua_user=? && Usua_clave=?");
+            ps=cnn.prepareStatement("select Usua_codigo,Usua_rol,Usua_user,Usua_clave,Emple_nombre from Tbusuario inner join Tbempleado on (Emple_codigo=Usua_codigo) where Usua_user=? && Usua_clave=?");
             ps.setString(1, lo.getUsuario());
-            ps.setString(2, lo.getClave());
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                login log = new login(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
-                lista.add(log);
-            }
+        ps.setString(2, lo.getClave());
+        rs=ps.executeQuery();
+        if(rs.next()){
+            login log=new login(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            lista.add(log);
+        }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error el login");
         }

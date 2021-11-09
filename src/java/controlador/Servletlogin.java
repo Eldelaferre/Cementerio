@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package controlador;
 
@@ -20,7 +19,7 @@ import modelo.loginDao;
 
 /**
  *
- * @author stild
+ * @author jonat
  */
 @WebServlet(name = "Servletlogin", urlPatterns = {"/Servletlogin"})
 public class Servletlogin extends HttpServlet {
@@ -67,7 +66,7 @@ public class Servletlogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
+        
         if(request.getParameter("btnlogin")!=null){
             ArrayList<login> lista=new ArrayList<>();
             String u,c,r,n,co;
@@ -91,14 +90,14 @@ public class Servletlogin extends HttpServlet {
                     HttpSession sesion=request.getSession();
                     sesion.setAttribute("rosesion",u);
                     sesion.setAttribute("varsesion",datlo.getNombre());
-
+                    
                     if(datlo.getRol().equals("administrador")){
                         JOptionPane.showMessageDialog(null, datlo.getRol());
                         JOptionPane.showMessageDialog(null, datlo.getCodigo());
                         sesion.setAttribute("rol",datlo.getRol());
                         sesion.setAttribute("Codigo", datlo.getCodigo());
                             response.sendRedirect("EspacioEmpleado.jsp");
-
+                        
                     }
                     else if(datlo.getRol().equals("trabajador")){
                         JOptionPane.showMessageDialog(null, datlo.getRol());
@@ -106,7 +105,7 @@ public class Servletlogin extends HttpServlet {
                         sesion.setAttribute("rol",datlo.getRol());
                         sesion.setAttribute("Codigo", datlo.getCodigo());
                             response.sendRedirect("EspacioEmpleado.jsp");
-
+                        
                     }
                     else if(datlo.getRol().equals("visitante")){
                         JOptionPane.showMessageDialog(null, datlo.getRol());
@@ -114,7 +113,7 @@ public class Servletlogin extends HttpServlet {
                         sesion.setAttribute("rol",datlo.getRol());
                         sesion.setAttribute("Codigo", datlo.getCodigo());
                             response.sendRedirect("EspacioEmpleado.jsp");
-
+                        
                     }
             }
             }
