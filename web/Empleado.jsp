@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Styles.css">
+    <script src="Js/jquery-3.6.0.min.js"></script>
+    <script src="Js/InsEstado.js"></script>
+
     <title>Fromulario Registro Tabla Empleado</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
 
     <header>
         <section class="sec_menu">
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -33,7 +36,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>

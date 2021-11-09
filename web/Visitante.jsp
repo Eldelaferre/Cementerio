@@ -37,11 +37,11 @@
 
             <nav>
                 <ul>
-                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Nosotros.jsp">Nosotros</a></li>
                     <li><a href="">Servicios</a></li>
                     <li><a href="">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>

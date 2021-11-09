@@ -4,16 +4,31 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Estado.jsp</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Herramientas.jsp</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/controlador/ServletNovedad.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/Novedad.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/controlador/ServletEstado.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/NovedadDao.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/LoginDao.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/controlador/ServletFallecido.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Js/InsFallecido.js</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/EstadoDao.java</file>
             <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/controlador/Conexion.java</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Nosotros.jsp</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/index.jsp</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Js/InsHerramienta.js</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/controlador/ServletHerramienta.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/controlador/Servletlogin.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/Login.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/Herramientas.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/HerramientasDao.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Herramientas.jsp</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/EspacioEmpleado.jsp</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/Fallecido.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Novedades.jsp</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Js/InsEstado.js</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/Estado.java</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/src/java/Modelo/FallecidoDao.java</file>
             <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Login.jsp</file>
             <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Fallecido.jsp</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/css/Styles.css</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Novedades.jsp</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/css/style.css</file>
-            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/css/Registro.css</file>
+            <file>file:/D:/SENA/NUR%20DERLY/Proyecto/Cementerio/web/Js/InsNovedad.js</file>
         </group>
     </open-files>
 </project-private>

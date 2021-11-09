@@ -40,7 +40,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
