@@ -32,7 +32,7 @@
 
             <nav>
                 <ul>
-                    <li><a href="Nosotros.jsp">Nosotros</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
                     <li><a href="">Servicios</a></li>
                     <li><a href="">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
@@ -46,13 +46,13 @@
             <div class="from">
                 <h1>Ingreso</h1>
                 <div class="grupo">
-                    <input type="text" name="usu" id="name" required><span class="barra"></span>
-                    <label class="label" for="">Usuario</label>
+                    <input type="text" name="usuario" id="name" required><span class="barra"></span>
+                    <label class="label" for="">Nombre</label>
                     
                 </div>
-                
+
                 <div class="grupo">
-                    <input type="password" name="cla" id="name" required><span class="barra"></span>
+                    <input type="password" name="clave" id="name" required><span class="barra"></span>
                     <label class="label" for="">Contraseña</label>
                     
                 </div>
