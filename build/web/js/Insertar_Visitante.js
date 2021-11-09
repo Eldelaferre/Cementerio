@@ -16,9 +16,9 @@ $(document).ready(function () {
             type: "post",
             url: "Servlet_Visitante",
             data: {dato: "Insertar", c: cod, d: doc, n: nom, di: dir, t: tel, co: cor},
-            success: function (res) {
-                if (res) {
-                    alert("Datos Guardados");
+            success: function (a) {
+                if (a) {
+                    //alert("Datos Guardados");
                 }
             }
         });
