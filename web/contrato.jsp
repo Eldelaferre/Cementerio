@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Js/jquery-3.6.0.min.js"></script>
+    <script src="Js/insertarcontrato.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Styles.css">
-    <title>Fromulario Registro Contrato</title>
+    <title>Formulario Registro Contrato</title>
 </head>
 <body>
     <!-- Parte del menú-->
 
     <header>
         <section class="sec_menu">
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -43,24 +45,23 @@
 
     <!-- Contenido pagina principal -->
     <section class="registro">
-        <h4>Fromulario Registro Contrato</h4>
+        <form action="" method="POST">
+        <h4>Formulario Registro Contrato</h4>
         <input class="control" type="text" name="Codigo" id="Codigo" placeholder="Ingrese numero contrato">
         <input class="control" type="text" name="Documento" id="Documento" placeholder="Ingrese el Documento Empleado">
         <input class="control" type="text" name="TIPO" id="TIPO" placeholder="Ingrese el TIPO ">
         <input class="control" type="text" name="descripcion" id="descripcion" placeholder="ingrese la descripcion">
         <input class="control" type="text" name="cantidad" id="cantidad" placeholder="ingrese la cantidad de pago">
         <input class="control" type="text" name="salario" id="salario" placeholder="ingrese el salario">
-        <input class="control" type="text" name="salario" id="salario" placeholder="ingrese el salario">
         <p>ingrese fecha de inicio de contrato</p>
-        <input class="control" type="date" name="Fecha" 
-        id="Fechainicial" placeholder="Ingrese la fecha inicio contrato">
+        <input class="control" type="date" name="Fecha" id="Fechainicial" placeholder="Ingrese la fecha inicio contrato">
         <p>Ingrese fecha de finalizacion de contrato</p>
-        <input class="control" type="date" name="Fecha" 
-        id="Fechafinal" placeholder="Ingrese la fecha final del contrato">
+        <input class="control" type="date" name="Fecha" id="Fechafinal" placeholder="Ingrese la fecha final del contrato">
         <input class="control" type="text" name="tipocontrato" id="tipocontrato" placeholder="ingrese el tipo de contrato">
         <input class="control" type="text" name="cargo" id="cargo" placeholder="ingrese el cargo">
          
-        <input class="boton" type="submit" value="Registrar">
+        <input class="boton" type="button" value="Registrar">
+        </form>
             
     </section>
     

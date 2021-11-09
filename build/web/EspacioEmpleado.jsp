@@ -27,7 +27,7 @@
 
     <header>
         <section class="sec_menu">
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -46,7 +46,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
@@ -80,7 +80,7 @@
             </div>
 
             <div class="caja">
-                <button><a href="Actividad.jsp">Actividades</a></button>
+                <button><a href="actividades.jsp">Actividades</a></button>
             </div>
 
             <div class="caja">
