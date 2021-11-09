@@ -1,12 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package controlador;
 
-import Modelo.Login;
-import Modelo.LoginDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -17,10 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
+import modelo.login;
+import modelo.loginDao;
 
 /**
  *
- * @author maico
+ * @author jonat
  */
 @WebServlet(name = "Servletlogin", urlPatterns = {"/Servletlogin"})
 public class Servletlogin extends HttpServlet {
@@ -38,8 +37,6 @@ public class Servletlogin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-           
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -70,68 +67,57 @@ public class Servletlogin extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        
-        
         if(request.getParameter("btnlogin")!=null){
-            ArrayList<Login> lista=new ArrayList<>();
-            String u,c,r,n;
-            
-            u=request.getParameter("usu");
-            c=request.getParameter("cla");
+            ArrayList<login> lista=new ArrayList<>();
+            String u,c,r,n,co;
+            int cod=0;
+            u=request.getParameter("usuario");
+            c=request.getParameter("clave");
+            JOptionPane.showMessageDialog(null, u+c);
             r=request.getParameter("");
-            n =request.getParameter("");
-            
-            
-            JOptionPane.showMessageDialog(null,"usu "+ u+ "cla "+c);
-            
-
-            Login lo=new Login(u, c);
-            Login datlo=new Login (u, c, r, n);
-            LoginDao ld=new LoginDao();
-            lista=ld.logindao(lo);
-                   
-            JOptionPane.showMessageDialog(null," usu "+ u+ " cla "+c+ " nom "+n+ " rol "+r);
-            
+            n=request.getParameter("");
+            login lo=new login(u, c);
+            loginDao id=new loginDao();
+            login datlo=new login(cod,r,u,c,n);
+            lista=id.LoginDao(lo);
+            JOptionPane.showMessageDialog(null, lista);
             if(lista.size()>0){
-            
-            for(int i=0; i<lista.size();i++){
+            for(int i=0;i<lista.size();i++){
                 datlo=lista.get(i);
-                
-                
             }
-            if(datlo.getUsuario().equals(u)&& datlo.getClave().equals(c)){
+                if(datlo.getUsuario().equals(u) && datlo.getClave().equals(c)){
+                    JOptionPane.showMessageDialog(null, "Datos correctos");
                     HttpSession sesion=request.getSession();
-                    sesion.setAttribute("sesion",u);
-                    sesion.setAttribute("nomsesion",datlo.getNombre());
-                    sesion.setAttribute("clavesesion",datlo.getClave());
-                          
-                
-                if(datlo.getRol().equals("trabajador")){
-                    JOptionPane.showMessageDialog(null, "Ha ingresado como trabajador");
-                    response.sendRedirect("EspacioEmpleado.jsp");
-                }
-                else if(datlo.getRol().equals("administrador")){
-                    JOptionPane.showMessageDialog(null,"Ha ingresado como administrador");
-                    response.sendRedirect("EspacioEmpleado.jsp");
-                        
+                    sesion.setAttribute("rosesion",u);
+                    sesion.setAttribute("varsesion",datlo.getNombre());
                     
-                }
-                else if(datlo.getRol().equals("visitante")){
-                    JOptionPane.showMessageDialog(null,"ha ingresado como visitante");             
-                    response.sendRedirect("EspacioEmpleado.jsp");
-    
-                }
+                    if(datlo.getRol().equals("administrador")){
+                        JOptionPane.showMessageDialog(null, datlo.getRol());
+                        JOptionPane.showMessageDialog(null, datlo.getCodigo());
+                        sesion.setAttribute("rol",datlo.getRol());
+                        sesion.setAttribute("Codigo", datlo.getCodigo());
+                            response.sendRedirect("EspacioEmpleado.jsp");
+                        
+                    }
+                    else if(datlo.getRol().equals("trabajador")){
+                        JOptionPane.showMessageDialog(null, datlo.getRol());
+                        JOptionPane.showMessageDialog(null, datlo.getCodigo());
+                        sesion.setAttribute("rol",datlo.getRol());
+                        sesion.setAttribute("Codigo", datlo.getCodigo());
+                            response.sendRedirect("EspacioEmpleado.jsp");
+                        
+                    }
+                    else if(datlo.getRol().equals("visitante")){
+                        JOptionPane.showMessageDialog(null, datlo.getRol());
+                        JOptionPane.showMessageDialog(null, datlo.getCodigo());
+                        sesion.setAttribute("rol",datlo.getRol());
+                        sesion.setAttribute("Codigo", datlo.getCodigo());
+                            response.sendRedirect("EspacioEmpleado.jsp");
+                        
+                    }
             }
             }
-            else{
-                JOptionPane.showMessageDialog(null,"Datos incorrectos");
-                response.sendRedirect("index.jsp");
-            }
-            
-            
-            }
-        
-        
+        }
     }
 
     /**
