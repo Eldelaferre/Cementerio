@@ -63,7 +63,7 @@
                 <select class="control rol" id="rol" name="rol">
                     <option value=""> Seleccionar Rol</option>
 
-                    <option value="Cliente">Cliente</option>
+                    <option value="Visitante">Visitante</option>
                     <option value="Empleado">Empleado</option>
 
                 </select>  

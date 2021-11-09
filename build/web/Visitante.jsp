@@ -52,17 +52,17 @@
         <!-- Fin Menú-->
         <section class="registro">
             <form action=""  method="POST">
-            <h4>Fromulario Registro Visitante</h4>
-            <input class="control" type="text" name="codigo" id="cod" placeholder="Ingrese el codigo">
-            <input class="control" type="text" name="Documento" id="doc" placeholder="Ingrese el Documento">
-            <input class="control" type="text" name="nombre" id="nom" placeholder="Ingrese el nombre">
-            <input class="control" type="text" name="Direccion" id="dir" placeholder="Ingrese la Direccion">
-            <input class="control" type="text" name="telefono" id="tel" placeholder="Ingrese el telefono">
-            <input class="control" type="email" name="correo" id="cor" placeholder="Ingrese el correo">
+                <h4>Fromulario Registro Visitante</h4>
+                <input class="control" type="text" name="codigo" id="cod" placeholder="Ingrese el codigo">
+                <input class="control" type="text" name="Documento" id="doc" placeholder="Ingrese el Documento">
+                <input class="control" type="text" name="nombre" id="nom" placeholder="Ingrese el nombre">
+                <input class="control" type="text" name="Direccion" id="dir" placeholder="Ingrese la Direccion">
+                <input class="control" type="text" name="telefono" id="tel" placeholder="Ingrese el telefono">
+                <input class="control" type="email" name="correo" id="cor" placeholder="Ingrese el correo">
 
 
-            <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="submit" value="Registrar">
-            
+                <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="submit" value="Registrar">
+
             </form>
 
         </section>

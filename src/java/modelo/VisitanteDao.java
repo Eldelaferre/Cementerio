@@ -1,4 +1,3 @@
-
 package modelo;
 
 import controlador.Conexion;
@@ -10,15 +9,16 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class VisitanteDao {
+
     Conexion con = new Conexion();
     Connection cnn = con.conexionbd();
     PreparedStatement ps;
     ResultSet rs;
-    
-    public int Insertar_Visitante(Visitante vis){
-        
+
+    public int Insertar_Visitante(Visitante vis) {
+
         JOptionPane.showMessageDialog(null, "Dao");
-        
+
         int x = 0;
         try {
             ps = cnn.prepareStatement("INSERT INTO tbvisitante VALUES(?,?,?,?,?,?)");
@@ -28,8 +28,7 @@ public class VisitanteDao {
             ps.setString(4, vis.getDireccion_Visitante());
             ps.setString(5, vis.getTelefono_Visitante());
             ps.setString(6, vis.getEmail_Visitante());
-            
-            
+
             x = ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Datos ok");
@@ -38,7 +37,7 @@ public class VisitanteDao {
             JOptionPane.showMessageDialog(null, "Error al insertar" + e);
         }
         return x;
-        
+
     }
-    
+
 }

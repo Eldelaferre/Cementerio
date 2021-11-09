@@ -40,7 +40,7 @@ public class Servlet_Visitante extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet_Visitante</title>");            
+            out.println("<title>Servlet Servlet_Visitante</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Servlet_Visitante at " + request.getContextPath() + "</h1>");
@@ -76,34 +76,34 @@ public class Servlet_Visitante extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
+
         JOptionPane.showMessageDialog(null, "Ser");
-        
-        int y , c,d;
-        String n,di,t,co;
-        
+        JOptionPane.showMessageDialog(null, "  El nombre");
+
+        int y, c, d;
+        String n, di, t, co;
+
         c = Integer.parseInt(request.getParameter("c"));
         d = Integer.parseInt(request.getParameter("d"));
         n = request.getParameter("n");
         di = request.getParameter("di");
         t = request.getParameter("t");
         co = request.getParameter("co");
-        
-        JOptionPane.showMessageDialog(null, n);
-        
+
+        JOptionPane.showMessageDialog(null, n + "  El nombre");
+
         Visitante visitante = new Visitante(c, d, n, di, t, co);
-        VisitanteDao vidao=new VisitanteDao();
-        
-        y=vidao.Insertar_Visitante(visitante);
-        if(y>0){
+        VisitanteDao vidao = new VisitanteDao();
+
+        y = vidao.Insertar_Visitante(visitante);
+        if (y > 0) {
             JOptionPane.showMessageDialog(null, " guardados");
             response.sendRedirect("Visitante.jsp");
-        }
-        else{
+        } else {
             JOptionPane.showMessageDialog(null, " Fail");
             response.sendRedirect("Visitante.jsp");
         }
-        
+
     }
 
     /**
