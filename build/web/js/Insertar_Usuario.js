@@ -1,9 +1,4 @@
 $(document).ready(function (){
-    alert('Hola gonorrea');
-    alert('Hola gonorrea');
-    alert('Hola gonorrea');
-    alert('Hola gonorrea');
-    alert('Hola gonorrea');
     
     $('.btn_ingreso_Usuario').on('click', function (){
        Insertar(); 
@@ -21,10 +16,10 @@ $(document).ready(function (){
             data: {dato: "Insertar", d: doc, r: rol, u: usu, c: cla},
             success: function (res) {
                 if (res){
-                    alert("Datos Guardados")
+                    alert("Datos Guardados");
                 }
             }
-        })
+        });
         
     };
     
