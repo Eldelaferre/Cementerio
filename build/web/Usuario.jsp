@@ -75,6 +75,15 @@
             </form>
 
         </section>
+        <section>
+
+            <table class="table table-sm" id="tablita">
+
+                
+            </table>
+
+
+        </section>
 
     </body>
 </html>

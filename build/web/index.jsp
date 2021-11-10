@@ -41,6 +41,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="Visitante.jsp">Contacto</a></li>
+                    <li><a href="PQR.jsp">PQR</a></li>
                     <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>

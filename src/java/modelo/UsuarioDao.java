@@ -35,5 +35,45 @@ public class UsuarioDao {
         return x;
 
     }
+    
+    public ArrayList<Usuario> Consulta_Gen_Usuarios() {
+        ArrayList<Usuario> lista = new ArrayList<>();
+        try {
+            ps = cnn.prepareStatement("SELECT * FROM tbusuario");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                us = new Usuario(rs.getInt(1),rs.getString(2),rs.getNString(3),rs.getString(4));
+                lista.add(us);
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error En la consulta" + e);
+        }
+        return lista;
+    }
+    
+    public boolean Actualizar_Usuario( Usuario us) {
+        JOptionPane.showMessageDialog(null,"Entró a la actualizacion"+ us);
+        int x;
+        boolean r = false;
+        try {
+            ps = cnn.prepareStatement("UPDATE tbusuario SET  Usua_rol=?, Usua_user=?, Usua_clave=?, WHERE Usua_codigo=?");
+            
+            
+            ps.setString(1, us.getRol_Usuario());
+            ps.setString(2, us.getUser_Usuario());
+            ps.setString(3, us.getClave_Usuario());
+            ps.setInt(4, us.getCodigo_Usuario());
+            
+            
+            x=ps.executeUpdate();
+            if(x>0){
+                r=true;
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error al Actualizar" + e);
+        }
+        return r;
+    }
+    
 
 }
