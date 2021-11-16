@@ -16,7 +16,7 @@
 
     <header>
         <section class="sec_menu">
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -35,7 +35,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
@@ -53,10 +53,16 @@
         <input class="control" type="date" name="Fecha" id="actividadfecha" placeholder="Ingrese la fecha de la Actividad">
         <input class="control" type="text" name="descripcion" id="descripcion" placeholder="Ingrese la descripcion ">
          
-        <input class="boton" type="button" value="Registrar">
+        <input class="boton" type="button" id="boton" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>
             
     </section>
+    
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

@@ -50,14 +50,19 @@
         <input class="control" type="text" name="Documento" id="Documento" placeholder="Ingrese el Documento">
         <input class="control" type="text" name="tipo" id="tipo" placeholder="Ingrese su cargo(visitante, emplado , administrador)">
         <input class="control" type="text" name="Nombres" id="Nombre" placeholder="Ingrese el Nombre">
-        <input class="control" type="text" name="Nombres" id="Direccion" placeholder="Ingrese la Direccion">
-        <input class="control" type="text" name="Nombres" id="Telefono" placeholder="Ingrese el numero de telefono">
+        <input class="control" type="text" name="Direccion" id="Direccion" placeholder="Ingrese la Direccion">
+        <input class="control" type="text" name="Telefono" id="Telefono" placeholder="Ingrese el numero de telefono">
         <input class="control" type="email" name="correo" id="correo" placeholder="Ingrese el correo electronico ">
         <input class="boton" type="button" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>
         
 
     </section>
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

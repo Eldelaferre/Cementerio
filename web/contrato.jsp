@@ -35,7 +35,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
@@ -61,9 +61,14 @@
         <input class="control" type="text" name="cargo" id="cargo" placeholder="ingrese el cargo">
          
         <input class="boton" type="button" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>
             
     </section>
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

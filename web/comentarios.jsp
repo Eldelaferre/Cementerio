@@ -52,8 +52,13 @@
         <input class="control" type="text" name="descripcion" id="descripcion" placeholder="Ingrese el comentario">
         
         <input class="boton" type="submit" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>
     </section>
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

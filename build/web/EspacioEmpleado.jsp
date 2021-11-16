@@ -87,11 +87,11 @@
                 <button><a href="Herramientas.jsp">Herramientas</a></button>
             </div>
             <div class="caja">
-                <button><a href="certificacion.jsp">Contrato</a></button>
+                <button><a href="certificacion.jsp">Certificacion</a></button>
             </div>
 
             <div class="caja">
-                <button><a href="contrato.jsp">Certificacion</a></button>
+                <button><a href="contrato.jsp">Contrato</a></button>
             </div>
 
         </section>

@@ -70,6 +70,7 @@ public class Servletcertificacion extends HttpServlet {
         JOptionPane.showMessageDialog(null, "en el servlet");
         String m;
         int c,nc;
+        if(request.getParameter("dato").equals("insertar")){
             int y;
             c=Integer.parseInt(request.getParameter("c"));
             nc=Integer.parseInt(request.getParameter("nc"));
@@ -88,6 +89,27 @@ public class Servletcertificacion extends HttpServlet {
                 JOptionPane.showMessageDialog(null, "datos no guardados");
                 response.sendRedirect("certificacion.jsp");
             }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            nc=Integer.parseInt(request.getParameter("nc"));
+            m=request.getParameter("m");
+            
+            JOptionPane.showMessageDialog(null,m);
+            
+            certificacion certificacion = new certificacion(c,nc,m);
+            certificacionDao cerdao=new certificacionDao();
+            dat=cerdao.actualizarcertificado(certificacion);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("certificacion.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("certificacion.jsp");
+            }
+        }
     }
 
     /**

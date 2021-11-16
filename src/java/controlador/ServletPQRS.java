@@ -70,6 +70,7 @@ public class ServletPQRS extends HttpServlet {
         JOptionPane.showMessageDialog(null, "en el servlet");
         String f,d;
         int c,cv;
+        if(request.getParameter("dato").equals("insertar")){
             int y;
             c=Integer.parseInt(request.getParameter("c"));
             cv=Integer.parseInt(request.getParameter("cv"));
@@ -89,6 +90,28 @@ public class ServletPQRS extends HttpServlet {
                 JOptionPane.showMessageDialog(null, "datos no guardados");
                 response.sendRedirect("PQR.jsp");
             }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            cv=Integer.parseInt(request.getParameter("cv"));
+            f=request.getParameter("f");
+            d=request.getParameter("d");
+            
+            JOptionPane.showMessageDialog(null,f+d);
+            
+            PQRS pqrs = new PQRS(c,cv,f,d);
+            PQRSDao pqrsdao=new PQRSDao();
+            dat=pqrsdao.actualizarPQRS(pqrs);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("PQR.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("PQR.jsp");
+            }
+        }
     }
 
     /**

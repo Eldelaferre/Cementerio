@@ -9,6 +9,9 @@ public class empleado {
     private String telefono;
     private String email;
 
+    public empleado() {
+    }
+
     public empleado(int codigo, String tipo, String nombre, String direccion, String telefono, String email) {
         this.codigo = codigo;
         this.tipo = tipo;

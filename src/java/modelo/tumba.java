@@ -7,6 +7,9 @@ public class tumba {
     private int codigoemp;
     private String ubicacion;
 
+    public tumba() {
+    }
+
     public tumba(int codigo, int codigoemp, String ubicacion) {
         this.codigo = codigo;
         this.codigoemp = codigoemp;

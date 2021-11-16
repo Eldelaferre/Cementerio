@@ -8,6 +8,9 @@ public class comentarios {
     private String fecha;
     private String descripcion;
 
+    public comentarios() {
+    }
+
     public comentarios(int codigo, int codigovisita, String fecha, String descripcion) {
         this.codigo = codigo;
         this.codigovisita = codigovisita;

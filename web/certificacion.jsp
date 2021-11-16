@@ -52,8 +52,13 @@
         <input class="control" type="text" name="motivo" id="motivo" placeholder="Ingrese el motivo de retiro">
          
         <input class="boton" type="button" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>    
     </section>
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

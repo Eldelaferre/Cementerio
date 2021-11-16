@@ -11,6 +11,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+import modelo.tumba;
+import modelo.tumbaDao;
 
 /**
  *
@@ -31,18 +34,7 @@ public class ServletTumba extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletTumba</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletTumba at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        PrintWriter out = response.getWriter();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -72,6 +64,50 @@ public class ServletTumba extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        JOptionPane.showMessageDialog(null, "en el servlet");
+        String u;
+        int c,ce;
+        if(request.getParameter("dato").equals("insertar")){
+            int y=0;
+            c=Integer.parseInt(request.getParameter("c"));
+            ce=Integer.parseInt(request.getParameter("ce"));
+            u=request.getParameter("u");
+            
+            JOptionPane.showMessageDialog(null,u);
+            
+            tumba tumba = new tumba(c,ce,u);
+            tumbaDao tumdao=new tumbaDao();
+            y=tumdao.insertartumba(tumba);
+            if(y>0){
+                response.sendRedirect("Tumba.jsp");
+                JOptionPane.showMessageDialog(null, "datos guardados");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no guardados");
+                response.sendRedirect("Tumba.jsp");
+            }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            ce=Integer.parseInt(request.getParameter("ce"));
+            u=request.getParameter("u");
+            
+            JOptionPane.showMessageDialog(null,u);
+            
+            tumba tumba = new tumba(c,ce,u);
+            tumbaDao tumdao=new tumbaDao();
+            dat=tumdao.actualizartumba(tumba);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("Tumba.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("Tumba.jsp");
+            }
+        }
     }
 
     /**

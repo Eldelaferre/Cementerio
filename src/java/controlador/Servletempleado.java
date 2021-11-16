@@ -70,6 +70,7 @@ public class Servletempleado extends HttpServlet {
         JOptionPane.showMessageDialog(null, "en el servlet");
         String t,n,d,te,e;
         int c;
+        if(request.getParameter("dato").equals("insertar")){
             int y;
             c=Integer.parseInt(request.getParameter("c"));
             t=request.getParameter("t");
@@ -91,6 +92,30 @@ public class Servletempleado extends HttpServlet {
                 JOptionPane.showMessageDialog(null, "datos no guardados");
                 response.sendRedirect("Empleado.jsp");
             }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            t=request.getParameter("t");
+            n=request.getParameter("n");
+            d=request.getParameter("d");
+            te=request.getParameter("te");
+            e=request.getParameter("e");
+            
+            JOptionPane.showMessageDialog(null,t+n+d+te+e);
+            
+            empleado empleado = new empleado(c,t,n,d,te,e);
+            empleadoDao empdao=new empleadoDao();
+            dat=empdao.actualizarempleado(empleado);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("empleado.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("empleado.jsp");
+            }
+        }
     }
 
     /**

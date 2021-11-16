@@ -59,9 +59,14 @@
         <input class="control" type="date" name="fecha" id="fecha" placeholder="Ingrese la fecha del PQR">
         <input class="control" type="text" name="descripcion" id="descripcion" placeholder="Ingrese la descripcion del PQR">
         <input class="boton" type="button" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>
             
     </section>
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

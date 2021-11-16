@@ -57,10 +57,15 @@
         <input class="control" type="text" name="Codigo" id="Codigo" placeholder="Ingrese el Codigo">
         <input class="control" type="text" name="Documento" id="Documento" placeholder="Ingrese el Documento">
         <input class="control" type="text" name="ubicacion" id="ubicacion" placeholder="Ingrese la ubicacion">
-        
+        <input class="boton" type="button" id="boton" value="Registrar">
+        <input class="actu" type="button" id="boton"value="Actualizar">
         </form>
 
     </section>
+    
+    <table class="table" id="res">
+        
+    </table>
     
 </body>
 </html>

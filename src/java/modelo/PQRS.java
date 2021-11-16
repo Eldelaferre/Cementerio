@@ -8,6 +8,9 @@ public class PQRS {
     private String fecha;
     private String descripcion;
 
+    public PQRS() {
+    }
+
     public PQRS(int codigo, int codigovis, String fecha, String descripcion) {
         this.codigo = codigo;
         this.codigovis = codigovis;

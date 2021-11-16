@@ -14,6 +14,9 @@ public class contrato {
     private String tipocontra;
     private String cargocontra;
 
+    public contrato() {
+    }
+
     public contrato(int numContrato, int codempleado, String tipopagocontra, String descripagocontra, int cantpagocontra, int salariocontra, String fecinicontra, String fecfincontra, String tipocontra, String cargocontra) {
         this.numContrato = numContrato;
         this.codempleado = codempleado;

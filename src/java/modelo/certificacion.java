@@ -7,6 +7,9 @@ public class certificacion {
     private int numcontrato;
     private String motivo;
 
+    public certificacion() {
+    }
+
     public certificacion(int codigo, int numcontrato, String motivo) {
         this.codigo = codigo;
         this.numcontrato = numcontrato;

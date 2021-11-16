@@ -70,6 +70,7 @@ public class Servletcomentarios extends HttpServlet {
         JOptionPane.showMessageDialog(null, "en el servlet");
         String f,d;
         int c,cv;
+        if(request.getParameter("dato").equals("insertar")){
             int y;
             c=Integer.parseInt(request.getParameter("c"));
             cv=Integer.parseInt(request.getParameter("cv"));
@@ -89,6 +90,28 @@ public class Servletcomentarios extends HttpServlet {
                 JOptionPane.showMessageDialog(null, "datos no guardados");
                 response.sendRedirect("comentarios.jsp");
             }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            cv=Integer.parseInt(request.getParameter("cv"));
+            f=request.getParameter("f");
+            d=request.getParameter("d");
+            
+            JOptionPane.showMessageDialog(null,f+d);
+            
+            comentarios comentarios = new comentarios(c,cv,f,d);
+            cometariosDao comdao=new cometariosDao();
+            dat=comdao.actualizarcomentario(comentarios);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("comentarios.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("comentarios.jsp");
+            }
+        }
     }
 
     /**

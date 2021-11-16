@@ -70,6 +70,7 @@ public class Servletcontrato extends HttpServlet {
         JOptionPane.showMessageDialog(null, "en el servlet");
         String tpc,dpc,fic,ffc,tc,cc;
         int c,ec,ca,s;
+        if(request.getParameter("dato").equals("insertar")){
             int y;
             c=Integer.parseInt(request.getParameter("c"));
             ec=Integer.parseInt(request.getParameter("ec"));
@@ -95,6 +96,35 @@ public class Servletcontrato extends HttpServlet {
                 JOptionPane.showMessageDialog(null, "datos no guardados");
                 response.sendRedirect("contrato.jsp");
             }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            ec=Integer.parseInt(request.getParameter("ec"));
+            tpc=request.getParameter("tpc");
+            dpc=request.getParameter("dpc");
+            ca=Integer.parseInt(request.getParameter("ca"));
+            s=Integer.parseInt(request.getParameter("s"));
+            fic=request.getParameter("fic");
+            ffc=request.getParameter("ffc");
+            tc=request.getParameter("tc");
+            cc=request.getParameter("cc");
+            
+            JOptionPane.showMessageDialog(null,tpc+dpc+fic+ffc+tc+cc);
+            
+            contrato contrato = new contrato(c,ec,tpc,dpc,ca,s,fic,ffc,tc,cc);
+            contratoDao condao=new contratoDao();
+            dat=condao.actualizarcontrato(contrato);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("contrato.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("contrato.jsp");
+            }
+        }
+            
     }
 
     /**

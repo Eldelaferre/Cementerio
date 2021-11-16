@@ -15,6 +15,10 @@ public class actividad {
         this.descripcion = descripcion;
     }
 
+    public actividad() {
+    }
+    
+
     public int getCodigo() {
         return codigo;
     }

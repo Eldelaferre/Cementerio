@@ -68,7 +68,8 @@ public class Servletactividad extends HttpServlet {
         JOptionPane.showMessageDialog(null, "en el servlet");
         String a,de;
         int c,d;
-            int y;
+        if(request.getParameter("dato").equals("insertar")){
+            int y=0;
             c=Integer.parseInt(request.getParameter("c"));
             d=Integer.parseInt(request.getParameter("d"));
             a=request.getParameter("a");
@@ -87,6 +88,28 @@ public class Servletactividad extends HttpServlet {
                 JOptionPane.showMessageDialog(null, "datos no guardados");
                 response.sendRedirect("actividades.jsp");
             }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c=Integer.parseInt(request.getParameter("c"));
+            d=Integer.parseInt(request.getParameter("d"));
+            a=request.getParameter("a");
+            de=request.getParameter("de");
+            
+            JOptionPane.showMessageDialog(null,a+de);
+            
+            actividad actividad = new actividad(c,d,a,de);
+            actividadDao actdao=new actividadDao();
+            dat=actdao.actualizaractividad(actividad);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("actividades.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("actividades.jsp");
+            }
+        }
     }
 
     /**
