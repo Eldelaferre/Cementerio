@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
@@ -38,4 +39,24 @@ public class EstadoDao {
         }
      return x;
     } 
+    public ArrayList<Estado> consultageneralestado(){
+        ArrayList<Estado> lista=new ArrayList<>();
+        
+        try {
+            ps=cnn.prepareStatement("SELECT *FROM TbEstado");
+            rs=ps.executeQuery();
+            while(rs.next()){
+                es=new Estado(rs.getInt(1), rs.getInt(2), rs.getString(3),
+                        rs.getString(4), rs.getString(5));
+                
+                lista.add(es);
+            }
+                    
+        } catch (SQLException ex) {
+            System.out.println("error en la consulta"+ex);
+        }
+        
+        return lista;
+        
+    }
 }

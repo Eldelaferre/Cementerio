@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
+        <link rel="stylesheet" href="css/tabla.css">
+        <script src="Js/jquery-3.6.0.min.js"></script>
+        <script src="Js/InsEstado.js"></script>
         <title>Fromulario Registro Tabla estado</title>
     </head>
     <body>
@@ -54,5 +57,24 @@
         <input class="btninsE" type="submit" value="Registrar">
                 
     </section>
+        <form class="main-container" method="POST" action="">
+            <table class="tabla" id="tab">
+                <thead>
+                    <tr>
+                        <th>Documento</th>
+                        <th>Usuario</th>
+                        <th>Clave</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Imagen</th>
+                    </tr>
+                
+                
+                
+                
+                </thead>
+            
+            </table>
+        </form>
     </body>
 </html>

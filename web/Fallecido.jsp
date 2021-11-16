@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
+        <link rel="stylesheet" href="css/tabla.css">
         <script src="Js/jquery-3.6.0.min.js"></script>
         <script src="Js/InsFallecido.js"></script>
         <title>Fromulario Registro Fallecido</title>
@@ -62,5 +63,12 @@
         
 
         </section>
+        <form class="main-container" action="" method="POST">
+            <table class="tabla" id="tab">
+                
+            
+            </table>
+        </form>
+        
     </body>
 </html>

@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
@@ -35,4 +36,27 @@ public class HerramientasDao {
         }
      return x;
     }
+    
+    public ArrayList<Herramientas> consultageneralHerramienta(){
+        ArrayList<Herramientas> lista=new ArrayList<>();
+        
+        try {
+            ps=cnn.prepareStatement("SELECT *FROM Tbherramientas");
+            rs=ps.executeQuery();
+            while(rs.next()){
+                her=new Herramientas(rs.getInt(1), rs.getInt(2), rs.getString(3),
+                        rs.getString(4), rs.getInt(5),rs.getInt(6),rs.getString(7));
+                
+                lista.add(her);
+            }
+                    
+        } catch (SQLException ex) {
+            System.out.println("error en la consulta"+ex);
+        }
+        
+        return lista;
+        
+    }
+    
+    
 }
