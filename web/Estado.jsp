@@ -12,12 +12,15 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
+        <link rel="stylesheet" href="css/tabla.css">
+        <script src="Js/jquery-3.6.0.min.js"></script>
+        <script src="Js/InsEstado.js"></script>
         <title>Fromulario Registro Tabla estado</title>
     </head>
     <body>
         <header>
         <section class="sec_menu">
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -36,23 +39,42 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
     </header>
-        <section class="registro">
+        <section action="" method="POST" class="registro">
         <h4>Fromulario Registro Tabla Estado</h4>
-        <input class="control" type="text" name="Codigo" id="Codigo" placeholder="Ingrese el codigo">
-        <input class="control" type="text" name="CodgioT" id="CodigoT" placeholder="Ingrese el codigo del fallecido">
+        <input class="control" type="text" name="Codigo" id="ces" placeholder="Ingrese el codigo">
+        <input class="control" type="text" name="CodgioT" id="cfal" placeholder="Ingrese el codigo del fallecido">
         <p>Ingrese fecha del estado</p>
-        <input class="control" type="date" name="Fecha" id="Fecharealizada" placeholder="Ingrese la fecha del estado">
+        <input class="control" type="date" name="Fecha" id="fecr" placeholder="Ingrese la fecha del estado">
         <p>Ingrese la hora del estado</p>
-        <input class="control" type="time" name="Hora" id="hora" placeholder="Ingrese la hora del estado">
+        <input class="control" type="time" name="Hora" id="horr" placeholder="Ingrese la hora del estado">
         <input class="control" type="text" name="tipo" id="tipo" placeholder="Ingrese el tipo de estado">
          
-        <input class="boton" type="submit" value="Registrar">
+        <input class="btninsE" type="submit" value="Registrar">
                 
     </section>
+        <form class="main-container" method="POST" action="">
+            <table class="tabla" id="tab">
+                <thead>
+                    <tr>
+                        <th>Documento</th>
+                        <th>Usuario</th>
+                        <th>Clave</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Imagen</th>
+                    </tr>
+                
+                
+                
+                
+                </thead>
+            
+            </table>
+        </form>
     </body>
 </html>

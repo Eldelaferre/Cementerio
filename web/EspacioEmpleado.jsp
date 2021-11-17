@@ -16,7 +16,7 @@
 
     <header>
         <section class="sec_menu">
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -35,7 +35,7 @@
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
@@ -48,14 +48,14 @@
         <h1>Espacio Empleado</h1>
         <section class="s1">
             <div class="caja">
-                <button><a href="Fallecido.html">Fallecidos</a></button>
+                <button><a href="Fallecido.jsp">Fallecidos</a></button>
             </div>
             <div class="caja">
-                <button><a href="Tumba.html">Tumbas</a></button>
+                <button><a href="Tumba.jsp">Tumbas</a></button>
             </div>
 
             <div class="caja">
-                <button><a href="Visitante.html">Visitantes</a></button>
+                <button><a href="Visitante.jsp">Visitantes</a></button>
             </div>
 
 
@@ -64,15 +64,15 @@
         <section class="s2">
 
             <div class="caja">
-                <button><a href="Novedad.html">Novedad</a></button>
+                <button><a href="Novedades.jsp">Novedad</a></button>
             </div>
 
             <div class="caja">
-                <button><a href="Actividad.html">Actividades</a></button>
+                <button><a href="Actividad.jsp">Actividades</a></button>
             </div>
 
             <div class="caja">
-                <button><a href="Herramientas.html">Herramientas</a></button>
+                <button><a href="Herramientas.jsp">Herramientas</a></button>
             </div>
 
         </section>
