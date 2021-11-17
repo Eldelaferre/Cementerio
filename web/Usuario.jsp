@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/Insertar_Usuario.js"></script>
+
 
 
 
@@ -76,14 +76,17 @@
 
         </section>
         <section>
+            <form action=""  method="POST">
+                <table class="table table-sm" id="tablita">
 
-            <table class="table table-sm" id="tablita">
 
-                
-            </table>
+                </table>
+            </form>
 
 
         </section>
 
     </body>
+    <script src="js/Prueba_Actualiza_Usuario.js"></script>
+    <script src="js/Insertar_Usuario.js"></script>
 </html>
