@@ -51,18 +51,19 @@ $(document).ready(function(){
                     console.log(res);
                     let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo</th>
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>
                                         <th>Codigo Visitante</th>
                                         <th>Fecha de comentario</th>
                                         <th>Descripcion de comentario</th>
-                                    </tr>`;
+                                        <th>Accion</th>
+                                    </tr></thead>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tr>  <td><input class="control" type="text" name="codigo" id="codigo" value="${i.codigo}"></td>
-                                                <td><input class="control" type="text" name="Codigov" id="Codigov" value="${i.codigovisita}"></td>
-                                                <td><input class="control" type="text" name="fecha" id="fecha" value="${i.fecha}"></td>
-                                                <td><input class="control" type="text" name="descripcion" id="descripcion" value="${i.descripcion}"></td>
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="codigo" id="codigo" value="${i.codigo}"></td>
+                                                <td><input class="cod" type="text" name="Codigov" id="Codigov" value="${i.codigovisita}"></td>
+                                                <td><input class="fec" type="text" name="fecha" id="fecha" value="${i.fecha}"></td>
+                                                <td><input class="des" type="text" name="descripcion" id="descripcion" value="${i.descripcion}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
-                                        </tr>`;
+                                        </tr></tbody>`;
                     }
                 }
         });

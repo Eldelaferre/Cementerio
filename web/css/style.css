@@ -34,6 +34,57 @@ body{
     font-size: 18px;
     color: white;
 }
+
+.des{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 250px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+.cod{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+.doc{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+.fec{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+.mov{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 600px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
 .registro p{
     height: 40px;
     text-align: center;

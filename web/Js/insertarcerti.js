@@ -50,16 +50,17 @@ $(document).ready(function(){
                     console.log(res);
                     let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo</th>
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>
                                         <th>Numero de contrato</th>
                                         <th>Motivo de retiro</th>
-                                    </tr>`;
+                                        <th>Accion</th>
+                                    </tr></thead>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tr>  <td><input class="control" type="text" name="Codigo" id="Codigo" value="${i.codigo}"></td>
-                                                <td><input class="control" type="text" name="numero" id="Codigo" value="${i.numcontrato}"></td>
-                                                <td><input class="control" type="text" name="motivo" id="Codigo" value="${i.motivo}"></td>
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Codigo" id="Codigo" value="${i.codigo}"></td>
+                                                <td><input class="doc" type="text" name="numero" id="Codigo" value="${i.numcontrato}"></td>
+                                                <td><input class="mov" type="text" name="motivo" id="Codigo" value="${i.motivo}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
-                                        </tr>`;
+                                        </tr></tbody>`;
                     }
                 }
         });

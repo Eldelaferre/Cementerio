@@ -21,12 +21,13 @@ public class loginDao {
         try {
             ps=cnn.prepareStatement("select Usua_codigo,Usua_rol,Usua_user,Usua_clave,Emple_nombre from Tbusuario inner join Tbempleado on (Emple_codigo=Usua_codigo) where Usua_user=? && Usua_clave=?");
             ps.setString(1, lo.getUsuario());
-        ps.setString(2, lo.getClave());
-        rs=ps.executeQuery();
-        if(rs.next()){
+            ps.setString(2, lo.getClave());
+            rs=ps.executeQuery();
+            if(rs.next()){
             login log=new login(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
             lista.add(log);
-        }
+            }
+            JOptionPane.showMessageDialog(null, lista);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error el login");
         }

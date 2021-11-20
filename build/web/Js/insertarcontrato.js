@@ -56,7 +56,7 @@ $(document).ready(function(){
                     console.log(res);
                     let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo</th>
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>
                                         <th>Codigo empleado</th>
                                         <th> Tipo de pago en el contrato</th>
                                         <th>Despripcion de pago</th>
@@ -66,20 +66,21 @@ $(document).ready(function(){
                                         <th>fecha fin de contrato</th>
                                         <th>Tipo de contrato</th>
                                         <th>Cargo de contrato</th>
-                                    </tr>`;
+                                        <th>Accion</th>
+                                    </tr></thead>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tr>  <td><input class="control" type="text" name="Codigo" id="Codigo" value="${i.numContrato}"></td>
-                                                <td><input class="control" type="text" name="Documento" id="Documento" value="${i.codempleado}"></td>
-                                                <td><input class="control" type="text" name="TIPO" id="TIPO" value="${i.tipopagocontra}"></td>
-                                                <td><input class="control" type="text" name="descripcion" id="descripcion" value="${i.descripagocontra}"></td>
-                                                <td><input class="control" type="text" name="cantidad" id="cantidad" value="${i.cantpagocontra}"></td>
-                                                <td><input class="control" type="text" name="salario" id="salario" value="${i.salariocontra}"></td>
-                                                <td><input class="control" type="text" name="Fecha" id="Fechainicial" value="${i.fecinicontra}"></td>
-                                                <td><input class="control" type="text" name="Fecha" id="Fechafinal" value="${i.fecfincontra}"></td>
-                                                <td><input class="control" type="text" name="tipocontrato" id="tipocontrato" value="${i.tipocontra}"></td>
-                                                <td><input class="control" type="text" name="cargo" id="cargo" value="${i.cargocontra}"></td>
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Codigo" id="Codigo" value="${i.numContrato}"></td>
+                                                <td><input class="cod" type="text" name="Documento" id="Documento" value="${i.codempleado}"></td>
+                                                <td><input class="doc" type="text" name="TIPO" id="TIPO" value="${i.tipopagocontra}"></td>
+                                                <td><input class="doc" type="text" name="descripcion" id="descripcion" value="${i.descripagocontra}"></td>
+                                                <td><input class="doc" type="text" name="cantidad" id="cantidad" value="${i.cantpagocontra}"></td>
+                                                <td><input class="doc" type="text" name="salario" id="salario" value="${i.salariocontra}"></td>
+                                                <td><input class="fec" type="text" name="Fecha" id="Fechainicial" value="${i.fecinicontra}"></td>
+                                                <td><input class="fec" type="text" name="Fecha" id="Fechafinal" value="${i.fecfincontra}"></td>
+                                                <td><input class="des" type="text" name="tipocontrato" id="tipocontrato" value="${i.tipocontra}"></td>
+                                                <td><input class="des" type="text" name="cargo" id="cargo" value="${i.cargocontra}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
-                                        </tr>`;
+                                        </tr></tbody>`;
                     }
                 }
         });

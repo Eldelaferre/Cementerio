@@ -93,6 +93,11 @@
             <div class="caja">
                 <button><a href="contrato.jsp">Contrato</a></button>
             </div>
+            
+            <div class="caja">
+                <button><a href="PQR.jsp">PQRS</a></button>
+            </div>
+
 
         </section>
     </main>

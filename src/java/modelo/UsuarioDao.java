@@ -1,12 +1,15 @@
 package modelo;
 
 import controlador.Conexion;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import static jdk.nashorn.tools.ShellFunctions.input;
 
 public class UsuarioDao {
     
@@ -35,5 +38,7 @@ public class UsuarioDao {
         return x;
 
     }
+    
+    
 
 }

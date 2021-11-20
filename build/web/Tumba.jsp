@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/tabla.css">
     <title>Formulario Registro Tumba</title>
 </head>
 <body>
@@ -63,9 +64,11 @@
 
     </section>
     
+    <form class="main-container" action="" method="POST">
     <table class="table" id="res">
         
     </table>
+    </form>
     
 </body>
 </html>

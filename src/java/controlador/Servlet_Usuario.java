@@ -6,12 +6,15 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
+import static jdk.nashorn.tools.ShellFunctions.input;
 import modelo.Usuario;
 import modelo.UsuarioDao;
 
@@ -72,7 +75,7 @@ public class Servlet_Usuario extends HttpServlet {
 
         d = Integer.parseInt(request.getParameter("d"));
         u = request.getParameter("u");
-        c = request.getParameter("c");
+        c = getMD5(request.getParameter("c"));
         r = request.getParameter("r");
         
         
@@ -90,8 +93,23 @@ public class Servlet_Usuario extends HttpServlet {
             JOptionPane.showMessageDialog(null, "danos no guardados");
             response.sendRedirect("Usuario.jsp");
         }
+        
+        
     }
-
+        public String getMD5(String input){
+        try {
+            MessageDigest md=MessageDigest.getInstance("MD5");
+            byte[] encBytes=md.digest(input.getBytes());
+            BigInteger numero=new BigInteger(1, encBytes);
+            String encString=numero.toString(16);
+            while(encString.length()<32){
+                encString="0"+encString;
+            }
+         return encString; 
+         } catch (Exception e) {
+             throw new RuntimeException(e);
+        }
+    }
     /**
      * Returns a short description of the servlet.
      *

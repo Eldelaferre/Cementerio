@@ -1,4 +1,3 @@
-
 package Modelo;
 
 public class Estado {
@@ -58,3 +57,4 @@ public class Estado {
 
     
 }
+

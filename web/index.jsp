@@ -117,13 +117,13 @@
                             </a>
                         </div>
                         <div class="caja_serv">
-                            <a href="Comentario.jsp">
+                            <a href="comentarios.jsp">
                                 <img src="img/Opinar_cementerio.jpg" alt="" width="300px">
                                 <h3>Opinar sobre un cementerio</h3>
                                 <br>
                                 <br>
-                                <li><a href="Comentario.jsp">Opinar sobre una Tumba</a></li>
-                                <li><a href="Comentario.jsp">Opinar sobre un cementerio</a></li>
+                                <li><a href="comentarios.jsp">Opinar sobre una Tumba</a></li>
+                                <li><a href="comentarios.jsp">Opinar sobre un cementerio</a></li>
                             </a>
                         </div>
                     </div>

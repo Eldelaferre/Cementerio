@@ -60,6 +60,7 @@
                 <button type="submit" name="btnlogin">Ingresar</button>
 
                 <a class="visitante" href="Usuario.jsp">No tengo cuenta, ir a Registro</a>
+                <a class="visitante" href="Empleado.jsp">No tengo cuenta, ir a Registro empleado</a>
             </div>
     
     

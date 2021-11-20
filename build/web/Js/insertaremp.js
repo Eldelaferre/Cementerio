@@ -52,22 +52,23 @@ $(document).ready(function(){
                     console.log(res);
                     let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo</th>
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>
                                         <th>Tipo de empleado</th>
                                         <th>Nombre de empleado</th>
                                         <th>Direccion de empleado</th>
                                         <th>Telefono de empleado</th>
                                         <th>Correo de empleado</th>
-                                    </tr>`;
+                                        <th>Accion</th>
+                                    </tr></thead>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tr>  <td><input class="control" type="text" name="Documento" id="Documento" value="${i.codigo}"></td>
-                                                <td><input class="control" type="text" name="tipo" id="tipo" value="${i.tipo}"></td>
-                                                <td><input class="control" type="text" name="Nombres" id="Nombres" value="${i.nombre}"></td>
-                                                <td><input class="control" type="text" name="Direccion" id="Direccion" value="${i.direccion}"></td>
-                                                <td><input class="control" type="text" name="Telefono" id="Telefono" value="${i.telefono}"></td>
-                                                <td><input class="control" type="text" name="correo" id="correo" value="${i.email}"></td>
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="doc" type="text" name="Documento" id="Documento" value="${i.codigo}"></td>
+                                                <td><input class="doc" type="text" name="tipo" id="tipo" value="${i.tipo}"></td>
+                                                <td><input class="doc" type="text" name="Nombres" id="Nombres" value="${i.nombre}"></td>
+                                                <td><input class="des" type="text" name="Direccion" id="Direccion" value="${i.direccion}"></td>
+                                                <td><input class="doc" type="text" name="Telefono" id="Telefono" value="${i.telefono}"></td>
+                                                <td><input class="des" type="text" name="correo" id="correo" value="${i.email}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
-                                        </tr>`;
+                                        </tr></tbody>`;
                     }
                 }
         });

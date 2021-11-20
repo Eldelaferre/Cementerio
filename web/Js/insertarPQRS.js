@@ -56,10 +56,10 @@ $(document).ready(function(){
                                         <th>Descripcion</th>
                                     </tr>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tr>  <td><input class="control" type="text" name="Codigo" id="Codigo" value="${i.codigo}"></td>
-                                                <td><input class="control" type="text" name="numero" id="numero" value="${i.codigovis}"></td>
-                                                <td><input class="control" type="text" name="fecha" id="fecha" value="${i.fecha}"></td>
-                                                <td><input class="control" type="text" name="descripcion" id="descripcion" value="${i.descripcion}"></td>
+                        tabla.innerHTML+=`<tr>  <td><input class="cod" type="text" name="Codigo" id="Codigo" value="${i.codigo}"></td>
+                                                <td><input class="cod" type="text" name="numero" id="numero" value="${i.codigovis}"></td>
+                                                <td><input class="fec" type="text" name="fecha" id="fecha" value="${i.fecha}"></td>
+                                                <td><input class="des" type="text" name="descripcion" id="descripcion" value="${i.descripcion}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                         </tr>`;
                     }

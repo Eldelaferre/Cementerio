@@ -14,10 +14,8 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/Insertar_Usuario.js"></script>
-
-
+        <script src="Js/jquery-3.6.0.min.js"></script>
+        <script src="Js/Insertar_Usuario.js"></script>
 
         <title>Formulario Registro Usuario</title>
     </head>
@@ -45,7 +43,7 @@
                         <li><a href="#sec3">Servicios</a></li>
                         <li><a href="#sec4">Aliados</a></li>
                         <li><a href="">Contacto</a></li>
-                        <li><a href="Login.html">Ingreso</a></li>
+                        <li><a href="Login.jsp">Ingreso</a></li>
                     </ul>
                 </nav>
             </section>
@@ -59,16 +57,16 @@
 
 
                 <h4>Formulario Registro Usuario</h4>
-                <input class="control doc" id="doc" type="text" name="Documento" id="Documento" placeholder="Ingrese el Documento">
-                <select class="control rol" id="rol" name="rol">
+                <input class="control" id="doc" type="text" name="Documento" placeholder="Ingrese el Documento">
+                <select class="control" id="rol" name="rol">
                     <option value=""> Seleccionar Rol</option>
 
-                    <option value="Visitante">Visitante</option>
-                    <option value="Empleado">Empleado</option>
+                    <option value="visitante">visitante</option>
+                    <option value="trabajador">trabajador</option>
 
                 </select>  
-                <input class="control usu" id="usu" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
-                <input class="control cla" id="cla" type="password" name="Nombres" id="nombres" placeholder="Ingrese su Contraseña">
+                <input class="control" id="usu" type="text" name="usuario" placeholder="Ingrese su Usuario">
+                <input class="control" id="cla" type="password" name="Nombres" placeholder="Ingrese su Contraseña">
 
                 <input class="boton btn_ingreso_Usuario" type="button" id="btn_ingreso_Usuario" value="Registrar">
 
