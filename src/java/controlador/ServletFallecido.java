@@ -5,8 +5,8 @@
  */
 package controlador;
 
-import Modelo.Fallecido;
-import Modelo.FallecidoDao;
+import modelo.Fallecido;
+import modelo.FallecidoDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

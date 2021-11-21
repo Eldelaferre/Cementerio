@@ -78,7 +78,7 @@
                             manejo de basuras, además puede brindarle al administrador inconformidades en la visita.</p>
                         <br>
                         <ul>
-                            <li><a href="Nosotros.html">...Ver más</a></li>
+                            <li><a href="Nosotros.jsp">...Ver más</a></li>
                         </ul>
 
                     </div>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="servi_sec_tres">
                         <div class="caja_serv">
-                            <a href="Estado.html">
+                            <a href="Estado.jsp">
                                 <img src="img/Consultar_tumba.jpg" alt="" width="300px">
                                 <h3>Consulta de Tumba de familares</h3>
                                 <br>

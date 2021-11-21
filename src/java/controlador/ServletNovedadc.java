@@ -5,10 +5,10 @@
  */
 package controlador;
 
-import Modelo.Herramientas;
-import Modelo.HerramientasDao;
-import Modelo.Novedad;
-import Modelo.NovedadDao;
+import modelo.Herramientas;
+import modelo.HerramientasDao;
+import modelo.Novedad;
+import modelo.NovedadDao;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;

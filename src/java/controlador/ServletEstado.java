@@ -5,8 +5,8 @@
  */
 package controlador;
 
-import Modelo.Estado;
-import Modelo.EstadoDao;
+import modelo.Estado;
+import modelo.EstadoDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

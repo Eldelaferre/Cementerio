@@ -5,10 +5,10 @@
  */
 package controlador;
 
-import Modelo.Fallecido;
-import Modelo.FallecidoDao;
-import Modelo.Herramientas;
-import Modelo.HerramientasDao;
+import modelo.Fallecido;
+import modelo.FallecidoDao;
+import modelo.Herramientas;
+import modelo.HerramientasDao;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;

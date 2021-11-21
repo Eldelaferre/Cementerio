@@ -5,8 +5,8 @@
  */
 package controlador;
 
-import Modelo.Herramientas;
-import Modelo.HerramientasDao;
+import modelo.Herramientas;
+import modelo.HerramientasDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

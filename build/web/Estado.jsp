@@ -59,20 +59,7 @@
     </section>
         <form class="main-container" method="POST" action="">
             <table class="tabla" id="tab">
-                <thead>
-                    <tr>
-                        <th>Documento</th>
-                        <th>Usuario</th>
-                        <th>Clave</th>
-                        <th>Rol</th>
-                        <th>Estado</th>
-                        <th>Imagen</th>
-                    </tr>
                 
-                
-                
-                
-                </thead>
             
             </table>
         </form>

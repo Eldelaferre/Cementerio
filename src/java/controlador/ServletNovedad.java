@@ -5,8 +5,8 @@
  */
 package controlador;
 
-import Modelo.Novedad;
-import Modelo.NovedadDao;
+import modelo.Novedad;
+import modelo.NovedadDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

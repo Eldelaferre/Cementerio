@@ -5,8 +5,8 @@
  */
 package controlador;
 
-import Modelo.Estado;
-import Modelo.EstadoDao;
+import modelo.Estado;
+import modelo.EstadoDao;
 import com.google.gson.Gson;
 
 import java.io.IOException;
