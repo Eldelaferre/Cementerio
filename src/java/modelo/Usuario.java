@@ -16,6 +16,10 @@ public class Usuario {
         this.Clave_Usuario = Clave_Usuario;
     }
 
+    public Usuario() {
+       
+    }
+
     public Integer getCodigo_Usuario() {
         return Codigo_Usuario;
     }

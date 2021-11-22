@@ -38,7 +38,42 @@ public class UsuarioDao {
         return x;
 
     }
+    public boolean actualizarusuario(Usuario usuactu){
+        int x=0;
+        boolean r=false;
+        try {
+            ps=cnn.prepareStatement("update tbusuario set Usua_rol=?,Usua_user=?,Usua_clave=? where Usua_codigo=?");
+            
+            ps.setString(1, usuactu.getRol_Usuario());
+            ps.setString(2, usuactu.getUser_Usuario());
+            ps.setString(3, usuactu.getClave_Usuario());
+            ps.setInt(4, usuactu.getCodigo_Usuario());
+
+            x=ps.executeUpdate();
+            if(x>0){
+                r=true;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+      return r;
+    }
     
+    public ArrayList<Usuario> consultageneralUsuario(){
+       ArrayList<Usuario> lista=new ArrayList<>();
+       try {
+            ps=cnn.prepareStatement("select*from Tbusuario");
+            rs=ps.executeQuery();
+            while(rs.next()){
+                us=new Usuario(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
+                lista.add(us);
+            }
+            
+        } catch (SQLException ex) {
+            System.out.println("Error en la consulta"+ ex);
+        }
+       return lista;
+    }
     
 
 }

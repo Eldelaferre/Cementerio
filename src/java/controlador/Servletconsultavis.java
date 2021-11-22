@@ -14,15 +14,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
-import modelo.certificacion;
-import modelo.certificacionDao;
+import modelo.Visitante;
+import modelo.VisitanteDao;
 
 /**
  *
  * @author jonat
  */
-@WebServlet(name = "Servletconsultarcer", urlPatterns = {"/Servletconsultarcer"})
-public class Servletconsultarcer extends HttpServlet {
+@WebServlet(name = "Servletconsultavis", urlPatterns = {"/Servletconsultavis"})
+public class Servletconsultavis extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,12 +36,12 @@ public class Servletconsultarcer extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        JOptionPane.showMessageDialog(null, "en el servlet consultar");
         PrintWriter out = response.getWriter();
-        ArrayList<certificacion> arr=new ArrayList<>();
-        certificacion lo=new certificacion();
-        certificacionDao cerdao=new certificacionDao();
-        arr=cerdao.consultageneralcertificado();
+        ArrayList<Visitante> arr=new ArrayList<>();
+        JOptionPane.showMessageDialog(null, "en el servlet consultar");
+        Visitante lo=new Visitante();
+        VisitanteDao vidao=new VisitanteDao();
+        arr=vidao.consultageneralvisitante();
         Gson gson=new Gson();
         out.println(gson.toJson(arr));
     }

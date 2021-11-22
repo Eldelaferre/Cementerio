@@ -61,11 +61,11 @@ $(document).ready(function(){
                                         <th>Accion</th>
                                     </tr></thead>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tbody><tr>  <td><input class="doc" type="text" name="Documento" id="Documento" value="${i.codigo}"></td>
-                                                <td><input class="doc" type="text" name="tipo" id="tipo" value="${i.tipo}"></td>
-                                                <td><input class="doc" type="text" name="Nombres" id="Nombres" value="${i.nombre}"></td>
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Documento" id="Documento" value="${i.codigo}"></td>
+                                                <td><input class="tel" type="text" name="tipo" id="tipo" value="${i.tipo}"></td>
+                                                <td><input class="tel" type="text" name="Nombres" id="Nombres" value="${i.nombre}"></td>
                                                 <td><input class="des" type="text" name="Direccion" id="Direccion" value="${i.direccion}"></td>
-                                                <td><input class="doc" type="text" name="Telefono" id="Telefono" value="${i.telefono}"></td>
+                                                <td><input class="tel" type="text" name="Telefono" id="Telefono" value="${i.telefono}"></td>
                                                 <td><input class="des" type="text" name="correo" id="correo" value="${i.email}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                         </tr></tbody>`;

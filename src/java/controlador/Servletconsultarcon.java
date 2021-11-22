@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 import modelo.contrato;
 import modelo.contratoDao;
 
@@ -35,6 +36,7 @@ public class Servletconsultarcon extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        JOptionPane.showMessageDialog(null, "en el servlet consultar");
         PrintWriter out = response.getWriter();
         ArrayList<contrato> arr=new ArrayList<>();
         contrato lo=new contrato();

@@ -40,7 +40,17 @@ body{
     font-weight: bold;
     font-family: 'calibri';
     font-size: 18px;
-    width: 250px;
+    width: 300px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+.dir{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 200px;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid transparent;
@@ -50,7 +60,7 @@ body{
     font-weight: bold;
     font-family: 'calibri';
     font-size: 18px;
-    width: 100%;
+    width: 120px;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid transparent;
@@ -60,7 +70,18 @@ body{
     font-weight: bold;
     font-family: 'calibri';
     font-size: 18px;
-    width: 100%;
+    width: 50%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.tel{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 150px;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid transparent;

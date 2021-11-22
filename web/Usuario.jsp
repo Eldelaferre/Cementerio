@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
+        <link rel="stylesheet" href="css/tabla.css">
         <script src="Js/jquery-3.6.0.min.js"></script>
         <script src="Js/Insertar_Usuario.js"></script>
 
@@ -69,10 +70,16 @@
                 <input class="control" id="cla" type="password" name="Nombres" placeholder="Ingrese su Contraseña">
 
                 <input class="boton btn_ingreso_Usuario" type="button" id="btn_ingreso_Usuario" value="Registrar">
+                <input class="actu" type="button" id="btnact" value="Actualizar">
 
             </form>
 
         </section>
+        
+        
+    <table class="table" id="res">
+        
+    </table>
 
     </body>
 </html>

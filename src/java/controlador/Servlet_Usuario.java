@@ -71,7 +71,11 @@ public class Servlet_Usuario extends HttpServlet {
         JOptionPane.showMessageDialog(null, "Ser en ser ");
         
         String  u, c, r;
-        int d, y;
+        int d;
+        
+        if(request.getParameter("dato").equals("insertar")){
+        
+        int y;
 
         d = Integer.parseInt(request.getParameter("d"));
         u = request.getParameter("u");
@@ -93,7 +97,29 @@ public class Servlet_Usuario extends HttpServlet {
             JOptionPane.showMessageDialog(null, "danos no guardados");
             response.sendRedirect("Usuario.jsp");
         }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            d = Integer.parseInt(request.getParameter("d"));
+            u = request.getParameter("u");
+            c = getMD5(request.getParameter("c"));
+            r = request.getParameter("r");
         
+        
+            JOptionPane.showMessageDialog(null, d+u+c+r);
+            
+            Usuario usuario = new Usuario(d,u,c,r);
+            UsuarioDao actdao=new UsuarioDao();
+            dat=actdao.actualizarusuario(usuario);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("Usuario.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("Usuario.jsp");
+            }
+        }
         
     }
         public String getMD5(String input){

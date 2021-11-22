@@ -46,13 +46,13 @@
             <div class="from">
                 <h1>Ingreso</h1>
                 <div class="grupo">
-                    <input type="text" name="usuario" id="name" required><span class="barra"></span>
+                    <input type="text" name="usuario" id="usario" required><span class="barra"></span>
                     <label class="label" for="">Nombre</label>
                     
                 </div>
 
                 <div class="grupo">
-                    <input type="password" name="clave" id="name" required><span class="barra"></span>
+                    <input type="password" name="clave" id="clave" required><span class="barra"></span>
                     <label class="label" for="">Contraseña</label>
                     
                 </div>
@@ -60,7 +60,7 @@
                 <button type="submit" name="btnlogin">Ingresar</button>
 
                 <a class="visitante" href="Usuario.jsp">No tengo cuenta, ir a Registro</a>
-                <a class="visitante" href="Empleado.jsp">No tengo cuenta, ir a Registro empleado</a>
+                <a class="visitante" href="Empleado.jsp">Ir a Registro de empleado</a>
             </div>
     
     

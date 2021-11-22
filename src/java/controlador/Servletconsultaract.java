@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 import modelo.actividad;
 import modelo.actividadDao;
 
@@ -37,6 +38,7 @@ public class Servletconsultaract extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        JOptionPane.showMessageDialog(null, "en el servlet consultar");
         PrintWriter out = response.getWriter();
         ArrayList<actividad> arr=new ArrayList<>();
         actividad lo=new actividad();

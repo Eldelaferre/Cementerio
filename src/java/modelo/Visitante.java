@@ -11,6 +11,9 @@ public class Visitante {
     private String Telefono_Visitante;
     private String Email_Visitante;
 
+    public Visitante() {
+    }
+
     public Visitante(Integer Codigo_Visitante, Integer Codigo_Usuario, String Nombre_Visitante, String Direccion_Visitante, String Telefono_Visitante, String Email_Visitante) {
         this.Codigo_Visitante = Codigo_Visitante;
         this.Codigo_Usuario = Codigo_Usuario;

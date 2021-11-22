@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/Insertar_Visitante.js"></script>
+        <link rel="stylesheet" href="css/tabla.css">
+        <script src="Js/jquery-3.6.0.min.js"></script>
+        <script src="Js/Insertar_Visitante.js"></script>
 
         <title>Formulario Registro visitante</title>
     </head>
@@ -62,10 +63,15 @@
 
 
                 <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="button" value="Registrar">
+                <input class="actu" type="button" id="btnact" value="Actualizar">
 
             </form>
 
         </section>
-
+        
+        <table class="table" id="res">
+        
+        </table>
+        
     </body>
 </html>

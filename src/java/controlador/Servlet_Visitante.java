@@ -68,8 +68,12 @@ public class Servlet_Visitante extends HttpServlet {
         JOptionPane.showMessageDialog(null, "Ser");
         JOptionPane.showMessageDialog(null, "  El nombre");
 
-        int y, c, d;
+        int c, d;
         String n, di, t, co;
+        
+        if(request.getParameter("dato").equals("insertar")){
+            
+        int y;
 
         c = Integer.parseInt(request.getParameter("c"));
         d = Integer.parseInt(request.getParameter("d"));
@@ -90,6 +94,30 @@ public class Servlet_Visitante extends HttpServlet {
         } else {
             JOptionPane.showMessageDialog(null, " Fail");
             response.sendRedirect("Visitante.jsp");
+        }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c = Integer.parseInt(request.getParameter("c"));
+            d = Integer.parseInt(request.getParameter("d"));
+            n = request.getParameter("n");
+            di = request.getParameter("di");
+            t = request.getParameter("t");
+            co = request.getParameter("co");
+
+            JOptionPane.showMessageDialog(null, n + "  El nombre");
+
+            Visitante visitante = new Visitante(c, d, n, di, t, co);
+            VisitanteDao vidao = new VisitanteDao();
+            dat=vidao.actualizarvisitante(visitante);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("Visitante.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("Visitante.jsp");
+            }
         }
     }
 

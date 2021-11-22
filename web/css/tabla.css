@@ -5,12 +5,10 @@
 table{
     background-color: white;
     text-align: left;
-    width: 80%;
-    margin-top: 30px;
-    margin-left: 100px;
+    width: 100%;
+    margin-top: 20px;
 }
 th,td{
-   
     padding: 20px;
 }
 thead{
