@@ -56,7 +56,7 @@
         <input class="control" type="text" name="descripcion" id="desc" placeholder="Ingrese la descripcion ">
         <input class="control" type="text" name="estado" id="estn" placeholder="Ingrese el estado de la novedad">
          
-        <input class="btninsN" type="submit" value="Registrar">
+        <input class="btninsN" id="boton" type="submit" value="Registrar">
             
         </section>
         

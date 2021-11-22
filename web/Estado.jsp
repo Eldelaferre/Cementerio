@@ -54,7 +54,7 @@
         <input class="control" type="time" name="Hora" id="horr" placeholder="Ingrese la hora del estado">
         <input class="control" type="text" name="tipo" id="tipo" placeholder="Ingrese el tipo de estado">
          
-        <input class="btninsE" type="submit" value="Registrar">
+        <input class="btninsE" id="boton" type="submit" value="Registrar">
                 
     </section>
         <form class="main-container" method="POST" action="">

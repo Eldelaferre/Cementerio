@@ -48,7 +48,7 @@ body{
     color: white;
     text-decoration: underline;
 }
-.boton{
+#boton{
     width: 100%;
     background: #1f531f;
     border: none;

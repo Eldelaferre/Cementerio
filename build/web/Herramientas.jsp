@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
 
-        <link rel="stylesheet" href="css/tabla.css">
+        <link rel="stylesheet" href="css/tablah.css">
 
         <script src="Js/jquery-3.6.0.min.js"></script>
         <script src="Js/InsHerramienta.js"></script>
@@ -57,7 +57,7 @@
         <input class="control" type="text" name="existencia" id="eh" placeholder="Ingrese la existencia">
         <input class="control" type="text" name="proveedor" id="pro" placeholder="Ingrese el proveedor">
 
-        <input class="btninsH" type="submit" value="Registrar">
+        <input class="btninsH" id="boton" type="submit" value="Registrar">
         
 
     </section>

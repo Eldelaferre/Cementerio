@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
 
-        <link rel="stylesheet" href="css/tabla.css">
+        <link rel="stylesheet" href="css/tablaf.css">
 
         <script src="Js/jquery-3.6.0.min.js"></script>
         <script src="Js/InsFallecido.js"></script>
@@ -61,7 +61,7 @@
 
         <input class="control" type="email" name="correo" id="cor" placeholder="Ingrese el correo electronico del responsable ">
         <input class="control" type="text" name="Telefono" id="tel" placeholder="Ingrese el telefono del responsable">
-        <input class="btninsF" type="submit" value="Registrar">
+        <input class="btninsF" id="boton" type="submit" value="Registrar">
         
 
         </section>
