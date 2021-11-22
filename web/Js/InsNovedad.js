@@ -45,22 +45,22 @@ $(document).ready(function () {
                     console.log(res)
                     let tabla=document.querySelector('#tab');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo Novedad</th>  
+                    tabla.innerHTML=`<thead><tr><th>Codigo Novedad</th>  
                                         <th>Codigo empleado</th>
                                         <th>Fecha Novedad</th>
                                         <th>Descripcion Novedad</th>
                                         <th>Estado Novedad</th>
                                         
-                                    </tr> `;
+                                    </tr> </thead>`;
                 for(let i of res){
-                    tabla.innerHTML+=`<tr><td><input type="text" name="doc"  id="codn" value=" ${i.codnove}"></td>
+                    tabla.innerHTML+=`<tbody><tr><td><input type="text" name="doc"  id="codn" value=" ${i.codnove}"></td>
                                     <td><input type="text" name="usu"  id="code" value=" ${i.codemple}"></td>
                                     <td><input type="text" name="cla"  id="fecn" value=" ${i.fecnove}"></td>
                                     <td><input type="text" name="rol"  id="desc" value="${i.descrinove}"></td>
                                     <td><input type="text" name="est"  id="estn" value="${i.estnove}"></td>
                                     
                                     
-                                    </tr>`;
+                                    </tr></tbody>`;
                 }                    
             }
         

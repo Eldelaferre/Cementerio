@@ -46,16 +46,16 @@ $(document).ready(function () {
                     console.log(res)
                     let tabla=document.querySelector('#tab');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo herramienta</th>  
+                    tabla.innerHTML=`<thead><tr><th>Codigo herramienta</th>  
                                         <th>Codigo trabajador</th>
                                         <th>Nombre herramienta</th>
                                         <th>Marca herramienta</th>
                                         <th>Precio herramienta</th>
                                         <th>Existencia herramienta</th>
                                         <th>Proveedor herramienta</th>
-                                    </tr> `;
+                                    </tr></thead>`;
                 for(let i of res){
-                    tabla.innerHTML+=`<tr><td><input type="text" name="doc"  id="codh" value=" ${i.codherramienta}"></td>
+                    tabla.innerHTML+=`<tbody><tr><td><input type="text" name="doc"  id="codh" value=" ${i.codherramineta}"></td>
                                     <td><input type="text" name="usu"  id="codt" value=" ${i.codtrabajador}"></td>
                                     <td><input type="text" name="cla"  id="nomh" value=" ${i.nomherr}"></td>
                                     <td><input type="text" name="rol"  id="marh" value="${i.marherr}"></td>
@@ -63,7 +63,7 @@ $(document).ready(function () {
                                     <td><input type="text" name="img"  id="eh" value="${i.exisherr}"></td>
                                     <td><input type="text" name="img"  id="pro" value="${i.proveedor}"></td>
                                     
-                                    </tr>`;
+                                    </tr></tbody>`;
                 }                    
             }
         

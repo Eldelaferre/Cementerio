@@ -47,22 +47,24 @@ $(document).ready(function () {
                     console.log(res)
                     let tabla=document.querySelector('#tab');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<tr><th>Codigo</th>  
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>  
                                         <th>Codigo Fallecido</th>
                                         <th>Fecha realizada</th>
                                         <th>Hora realizada</th>
                                         <th>Tipo</th>
                                         
-                                    </tr> `;
+                                    </tr></thead> `;
                 for(let i of res){
-                    tabla.innerHTML+=`<tr><td><input type="text" name="doc"  id="ces" value=" ${i.codestado}"></td>
+                    tabla.innerHTML+=`<tbody><tr>
+                                    
+                                    <td><input type="text" name="doc"  id="ces" value=" ${i.codestado}"></td>
                                     <td><input type="text" name="usu"  id="cfal" value=" ${i.codfallecido}"></td>
                                     <td><input type="text" name="cla"  id="fecr" value=" ${i.fecreal}"></td>
                                     <td><input type="text" name="rol"  id="horr" value="${i.horreal}"></td>
                                     <td><input type="text" name="est"  id="tipo" value="${i.tipo}"></td>
                                     
                                     
-                                    </tr>`;
+                                    </tr></tbody>`;
                 }                    
             }
         

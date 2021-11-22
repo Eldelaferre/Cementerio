@@ -1,7 +1,8 @@
 
 .main-container{
-    margin: 150px auto;
+    margin:  40px 400px ;
     width: 600px;
+    
 }
 table{
     background-color: white;
@@ -9,18 +10,21 @@ table{
     width: 100%;
 }
 th,td{
-    border: solid 1px black;
-    padding: 20px;
+   
+    padding: 10px;
 }
 thead{
     background-color: #246355;
     border-bottom: solid 5px;
     color: white;
+    
 }
-tr:nth-child(even){
+tbody:nth-child(even){
     background-color: #ddd;
+   
 }
 tr:hover td{
     background-color: #369681;
     color: white;
+    
 }
