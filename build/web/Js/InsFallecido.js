@@ -47,28 +47,33 @@ $(document).ready(function () {
             
                 success:function (res){
                     console.log(res)
-                    let tabla=document.querySelector('#tab');
+                    let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`<thead><tr><th>Codigo Fallecido</th>  
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>  
                                         <th>Codigo Tumba</th>
-                                        <th>nombre</th>
-                                        <th>Fecha nacimiento</th>
-                                        <th>Fecha de muerte</th>
-                                        <th>Hora de muerte</th>
-                                        <th>Nombre responsable</th>
-                                        <th>Correo</th>
-                                        <th>Telefono </th>
+                                        <th>Nombre Fallecido</th>
+                                        <th>Fecha de nacimiento</th>
+                                        <th>Fecha de Muerte</th>
+                                        <th>Hora de Muerte</th>
+                                        <th>Responsable</th>
+                                        <th>Correo de Responsable</th>
+                                        <th>Telefono de Responsable</th>
+                                        <th>Accion</th>
+                                        
                                     </tr></thead> `;
                 for(let i of res){
-                    tabla.innerHTML+=`<tbody><tr><td><input type="text" name="doc"  id="codf" value=" ${i.codfallecido}"></td>
-                                    <td><input type="text" name="usu"  id="codt" value=" ${i.codtumba}"></td>
-                                    <td><input type="text" name="cla"  id="nomf" value=" ${i.nomfalle}"></td>
-                                    <td><input type="text" name="rol"  id="fecn" value="${i.fecnaci}"></td>
-                                    <td><input type="text" name="est"  id="fecm" value="${i.fecmuerte}"></td>
-                                    <td><input type="text" name="img"  id="fech" value="${i.fechora}"></td>
-                                    <td><input type="text" name="img"  id="resp" value="${i.responsable}"></td>
-                                    <td><input type="text" name="img"  id="cor" value="${i.correo}"></td>
-                                    <td><input type="text" name="img"  id="tel" value="${i.tel}"></td>
+                    tabla.innerHTML+=`<tbody><tr>
+                                    
+                                    <td><input class="codi" type="text" name="doc"  id="ces" value=" ${i.codfallecido}"></td>
+                                    <td><input class="codi" type="text" name="usu"  id="cfal" value=" ${i.codtumba}"></td>
+                                    <td><input class="tel" type="text" name="cla"  id="fecr" value=" ${i.nomfalle}"></td>
+                                    <td><input class="tel" type="text" name="rol"  id="horr" value="${i.fecnaci}"></td>
+                                    <td><input class="tel" type="text" name="est"  id="tipo" value="${i.fecmuerte}"></td>
+                                    <td><input class="tel" type="text" name="est"  id="tipo" value="${i.fechora}"></td>
+                                    <td><input class="tel" type="text" name="est"  id="tipo" value="${i.responsable}"></td>
+                                    <td><input class="tel" type="text" name="est"  id="tipo" value="${i.correo}"></td>
+                                    <td><input class="tel" type="text" name="est"  id="tipo" value="${i.tel}"></td>
+                                    <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                     
                                     </tr></tbody>`;
                 }                    

@@ -44,22 +44,22 @@ $(document).ready(function () {
             
                 success:function (res){
                     console.log(res)
-                    let tabla=document.querySelector('#tab');
+                    let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
                     tabla.innerHTML=`<thead><tr><th>Codigo Novedad</th>  
                                         <th>Codigo empleado</th>
                                         <th>Fecha Novedad</th>
                                         <th>Descripcion Novedad</th>
                                         <th>Estado Novedad</th>
-                                        
+                                        <th>Accion</th>
                                     </tr> </thead>`;
                 for(let i of res){
-                    tabla.innerHTML+=`<tbody><tr><td><input type="text" name="doc"  id="codn" value=" ${i.codnove}"></td>
-                                    <td><input type="text" name="usu"  id="code" value=" ${i.codemple}"></td>
-                                    <td><input type="text" name="cla"  id="fecn" value=" ${i.fecnove}"></td>
-                                    <td><input type="text" name="rol"  id="desc" value="${i.descrinove}"></td>
-                                    <td><input type="text" name="est"  id="estn" value="${i.estnove}"></td>
-                                    
+                    tabla.innerHTML+=`<tbody><tr><td><input class="codi" type="text" name="doc"  id="codn" value=" ${i.codnove}"></td>
+                                    <td><input class="cod" type="text" name="usu"  id="code" value=" ${i.codemple}"></td>
+                                    <td><input class="fec" type="text" name="cla"  id="fecn" value=" ${i.fecnove}"></td>
+                                    <td><input class="des" type="text" name="rol"  id="desc" value="${i.descrinove}"></td>
+                                    <td><input class="tel"type="text" name="est"  id="estn" value="${i.estnove}"></td>
+                                    <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                     
                                     </tr></tbody>`;
                 }                    

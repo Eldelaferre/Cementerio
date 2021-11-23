@@ -49,8 +49,7 @@ public class FallecidoDao {
             rs=ps.executeQuery();
             JOptionPane.showMessageDialog(null, "entra");
             while(rs.next()){
-                fal=new Fallecido(rs.getInt(1), rs.getInt(2), rs.getString(3),
-                        rs.getString(4), rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getInt(9));
+                fal=new Fallecido(rs.getInt(1), rs.getInt(2), rs.getString(3),rs.getString(4), rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getInt(9));
                 
                 lista.add(fal);
             }

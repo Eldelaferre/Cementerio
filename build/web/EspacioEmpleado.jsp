@@ -76,7 +76,7 @@
         <section class="s2">
 
             <div class="caja">
-                <button><a href="Novedad.jsp">Novedad</a></button>
+                <button><a href="Novedades.jsp">Novedad</a></button>
             </div>
 
             <div class="caja">

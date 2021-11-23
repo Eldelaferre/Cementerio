@@ -3,33 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Js/Insertar_Usuario.js</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/Novedad.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/css/style.css</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletFallecido.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Herramientas.jsp</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/css/tabla.css</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/Servletconsultausu.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/UsuarioDao.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/Fallecido.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletNovedad.java</file>
             <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Js/InsHerramienta.js</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletFallecidoc.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletHerramientac.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/FallecidoDao.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/Herramientas.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Fallecido.jsp</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletNovedadc.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/NovedadDao.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/HerramientasDao.java</file>
+            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Js/InsFallecido.js</file>
             <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Js/InsEstado.js</file>
             <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Js/InsNovedad.js</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/Servlet_Usuario.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletHerramienta.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Novedades.jsp</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/Estado.java</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Js/InsFallecido.js</file>
-            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Estado.jsp</file>
+            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/controlador/ServletFallecidoc.java</file>
+            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/src/java/modelo/FallecidoDao.java</file>
+            <file>file:/C:/Users/jonat/Documents/GitHub/Cementerio/web/Fallecido.jsp</file>
         </group>
     </open-files>
 </project-private>

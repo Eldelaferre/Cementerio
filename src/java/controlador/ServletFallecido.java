@@ -65,6 +65,7 @@ public class ServletFallecido extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
+        JOptionPane.showMessageDialog(null, "en el servelt");
         String nomf,fecn,fecm,fech,resp,cor;
             int codf,codt,tel,y;
             codf=Integer.parseInt(request.getParameter("cf"));

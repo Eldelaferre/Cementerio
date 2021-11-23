@@ -45,7 +45,7 @@ $(document).ready(function () {
             
                 success:function (res){
                     console.log(res)
-                    let tabla=document.querySelector('#tab');
+                    let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
                     tabla.innerHTML=`<thead><tr><th>Codigo herramienta</th>  
                                         <th>Codigo trabajador</th>
@@ -54,16 +54,17 @@ $(document).ready(function () {
                                         <th>Precio herramienta</th>
                                         <th>Existencia herramienta</th>
                                         <th>Proveedor herramienta</th>
+                                        <th>Accion</th>
                                     </tr></thead>`;
                 for(let i of res){
-                    tabla.innerHTML+=`<tbody><tr><td><input type="text" name="doc"  id="codh" value=" ${i.codherramineta}"></td>
-                                    <td><input type="text" name="usu"  id="codt" value=" ${i.codtrabajador}"></td>
-                                    <td><input type="text" name="cla"  id="nomh" value=" ${i.nomherr}"></td>
-                                    <td><input type="text" name="rol"  id="marh" value="${i.marherr}"></td>
-                                    <td><input type="text" name="est"  id="ph" value="${i.precioherr}"></td>
-                                    <td><input type="text" name="img"  id="eh" value="${i.exisherr}"></td>
-                                    <td><input type="text" name="img"  id="pro" value="${i.proveedor}"></td>
-                                    
+                    tabla.innerHTML+=`<tbody><tr><td><input class="codi" type="text" name="doc"  id="codh" value=" ${i.codherramineta}"></td>
+                                    <td><input class="cod" type="text" name="usu"  id="codt" value=" ${i.codtrabajador}"></td>
+                                    <td><input class="tel" type="text" name="cla"  id="nomh" value=" ${i.nomherr}"></td>
+                                    <td><input class="tel" type="text" name="rol"  id="marh" value="${i.marherr}"></td>
+                                    <td><input class="tel" type="text" name="est"  id="ph" value="${i.precioherr}"></td>
+                                    <td><input class="tel" type="text" name="img"  id="eh" value="${i.exisherr}"></td>
+                                    <td><input class="tel" type="text" name="img"  id="pro" value="${i.proveedor}"></td>
+                                    <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                     </tr></tbody>`;
                 }                    
             }

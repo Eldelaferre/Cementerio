@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
+        <link rel="stylesheet" href="css/tabla.css">
         <script src="Js/jquery-3.6.0.min.js"></script>
         <script src="Js/InsNovedad.js"></script>
         <title>Formulario Registro Novedad</title>
