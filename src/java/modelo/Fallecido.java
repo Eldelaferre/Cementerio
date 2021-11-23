@@ -1,5 +1,5 @@
 
-package Modelo;
+package modelo;
 
 
 public class Fallecido {
@@ -12,6 +12,9 @@ public class Fallecido {
     private String responsable;
     private String correo;
     private int tel;
+
+    public Fallecido() {
+    }
 
     public Fallecido(int codfallecido, int codtumba, String nomfalle, String fecnaci, String fecmuerte, String fechora, String responsable, String correo, int tel) {
         this.codfallecido = codfallecido;

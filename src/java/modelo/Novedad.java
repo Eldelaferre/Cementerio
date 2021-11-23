@@ -1,5 +1,5 @@
 
-package Modelo;
+package modelo;
 
 
 public class Novedad {
@@ -8,6 +8,9 @@ public class Novedad {
     private String fecnove;
     private String descrinove;
     private String estnove;
+
+    public Novedad() {
+    }
 
     public Novedad(int codnove, int codemple, String fecnove, String descrinove, String estnove) {
         this.codnove = codnove;

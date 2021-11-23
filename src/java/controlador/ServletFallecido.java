@@ -11,6 +11,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+import modelo.Fallecido;
+import modelo.FallecidoDao;
 
 /**
  *
@@ -31,18 +34,7 @@ public class ServletFallecido extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletFallecido</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletFallecido at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        PrintWriter out = response.getWriter();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -72,6 +64,31 @@ public class ServletFallecido extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        String nomf,fecn,fecm,fech,resp,cor;
+            int codf,codt,tel,y;
+            codf=Integer.parseInt(request.getParameter("cf"));
+            codt=Integer.parseInt(request.getParameter("ct"));
+            nomf=request.getParameter("nf");
+            fecn=request.getParameter("fn");
+            fecm=request.getParameter("fm");
+            fech=request.getParameter("fh");
+            resp=request.getParameter("r");
+            cor=request.getParameter("c");
+            tel=Integer.parseInt(request.getParameter("t"));
+            
+            Fallecido fal=new Fallecido(codf, codt, nomf,fecn,fecm,fech,resp,cor,tel);
+            FallecidoDao usudao=new FallecidoDao();
+            y=usudao.insertarFallecido(fal);
+               if(y>0){
+                   response.sendRedirect("Fallecido.jsp");
+                   JOptionPane.showMessageDialog(null,"datos guardados");
+                   
+               }
+               else{
+                   JOptionPane.showMessageDialog(null,"los datos no se guardaron");
+                   response.sendRedirect("Fallecido.jsp");
+               }
     }
 
     /**

@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
+        <link rel="stylesheet" href="css/tabla.css">
         <title>Formulario Registro Tabla estado</title>
     </head>
     <body>
@@ -54,7 +55,12 @@
         <input class="control" type="text" name="tipo" id="tipo" placeholder="Ingrese el tipo de estado">
          
         <input class="btninsE" type="button" value="Registrar">
+        <input class="actu" type="button" value="Actualizar">
                 
     </section>
+        
+        <table class="table" id="res">
+        
+        </table>
     </body>
 </html>

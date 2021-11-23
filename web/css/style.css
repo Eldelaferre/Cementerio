@@ -40,7 +40,7 @@ body{
     font-weight: bold;
     font-family: 'calibri';
     font-size: 18px;
-    width: 300px;
+    width: 270px;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid transparent;
@@ -61,6 +61,16 @@ body{
     font-family: 'calibri';
     font-size: 18px;
     width: 120px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+.codi{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 20px;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid transparent;
@@ -91,7 +101,7 @@ body{
     font-weight: bold;
     font-family: 'calibri';
     font-size: 18px;
-    width: 100%;
+    width: 50%;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid transparent;
@@ -121,6 +131,46 @@ body{
     text-decoration: underline;
 }
 .boton{
+    width: 100%;
+    background: #1f531f;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btninsE{
+    width: 100%;
+    background: #1f531f;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btninsN{
+    width: 100%;
+    background: #1f531f;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btninsH{
+    width: 100%;
+    background: #1f531f;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btninsF{
     width: 100%;
     background: #1f531f;
     border: none;

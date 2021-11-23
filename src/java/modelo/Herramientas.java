@@ -1,5 +1,5 @@
 
-package Modelo;
+package modelo;
 
 
 public class Herramientas {
@@ -9,7 +9,10 @@ public class Herramientas {
     private String marherr;
     private int precioherr;
     private int exisherr;
-    private String proveedor; 
+    private String proveedor;
+
+    public Herramientas() {
+    }
 
     public Herramientas(int codherramineta, int codtrabajador, String nomherr, String marherr, int precioherr, int exisherr, String proveedor) {
         this.codherramineta = codherramineta;

@@ -59,8 +59,14 @@
         <input class="control" type="email" name="correo" id="cor" placeholder="Ingrese el correo electronico del responsable ">
         <input class="control" type="text" name="Telefono" id="tel" placeholder="Ingrese el telefono del responsable">
         <input class="btninsF" type="button" value="Registrar">
+        <input class="actu" type="button" value="Actualizar">
         
 
         </section>
+        
+        <table class="table" id="res">
+        
+        </table>
+        
     </body>
 </html>

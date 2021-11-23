@@ -4,23 +4,24 @@
  */
 package controlador;
 
-import modelo.Herramientas;
-import modelo.HerramientasDao;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
+import modelo.Fallecido;
+import modelo.FallecidoDao;
 
 /**
  *
  * @author jonat
  */
-@WebServlet(name = "ServletHerramienta", urlPatterns = {"/ServletHerramienta"})
-public class ServletHerramienta extends HttpServlet {
+@WebServlet(name = "ServletFallecidoc", urlPatterns = {"/ServletFallecidoc"})
+public class ServletFallecidoc extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,6 +36,12 @@ public class ServletHerramienta extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        FallecidoDao faldao=new FallecidoDao();
+        ArrayList<Fallecido> lista=new ArrayList<>();
+        lista=faldao.consultageneralFallecido();
+        Gson gson=new Gson();
+        out.println(gson.toJson(lista));
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -64,29 +71,6 @@ public class ServletHerramienta extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        String  nomh,marh,pro;
-            int codh,codt,ph,eh,y;
-            codh=Integer.parseInt(request.getParameter("ch"));
-            codt=Integer.parseInt(request.getParameter("ct"));
-            nomh=request.getParameter("nh");
-            marh=request.getParameter("mh");
-            ph=Integer.parseInt(request.getParameter("ph"));
-            eh=Integer.parseInt(request.getParameter("eh"));
-            pro=request.getParameter("p");
-            
-            Herramientas her=new Herramientas(codh, codt, nomh, marh, ph, eh, pro);
-            HerramientasDao usudao=new HerramientasDao();
-            y=usudao.insertarHerramientas(her);
-               if(y>0){
-                   response.sendRedirect("Herramientas.jsp");
-                   JOptionPane.showMessageDialog(null,"datos guardados");
-                   
-               }
-               else{
-                   JOptionPane.showMessageDialog(null,"los datos no se guardaron");
-                   response.sendRedirect("Herramientas.jsp");
-               }
     }
 
     /**

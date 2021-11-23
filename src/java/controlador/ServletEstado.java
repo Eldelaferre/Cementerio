@@ -4,8 +4,8 @@
  */
 package controlador;
 
-import Modelo.Estado;
-import Modelo.EstadoDao;
+
+import modelo.EstadoDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
+import modelo.Estado;
 
 /**
  *
@@ -65,6 +66,7 @@ public class ServletEstado extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
+        JOptionPane.showMessageDialog(null, "en el servlet");
         String fecr,horr,tipo;
         int ces,cfal,y;
             

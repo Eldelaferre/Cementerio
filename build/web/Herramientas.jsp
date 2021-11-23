@@ -55,8 +55,13 @@
         <input class="control" type="text" name="proveedor" id="pro" placeholder="Ingrese el proveedor">
 
         <input class="btninsH" type="button" value="Registrar">
+        <input class="actu" type="button" value="Actualizar">
         
 
     </section>
+        
+        <table class="table" id="res">
+        
+        </table>
     </body>
 </html>

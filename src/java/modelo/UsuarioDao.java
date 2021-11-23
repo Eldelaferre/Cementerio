@@ -31,6 +31,7 @@ public class UsuarioDao {
             x = ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Datos ok");
+            JOptionPane.showMessageDialog(null, "Debe diligenciar el formulario de empleado para poder ingresar");
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error al insertar" + e);

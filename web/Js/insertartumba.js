@@ -48,7 +48,7 @@ $(document).ready(function(){
                     console.log(res);
                     let tabla=document.querySelector('#res');
                     tabla.innerHTML='';
-                    tabla.innerHTML=`cthead><tr><th>Codigo</th>
+                    tabla.innerHTML=`<thead><tr><th>Codigo</th>
                                         <th>Codigo Empleado</th>
                                         <th>Ubicacion</th>
                                         <th>Accion</th>

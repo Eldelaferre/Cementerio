@@ -67,11 +67,11 @@
             
     </section>
     
-    <form class="main-container" action="" method="POST">
+    
     <table class="table" id="res">
         
     </table>
-    </form>
+    
     
 </body>
 </html>

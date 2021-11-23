@@ -54,7 +54,13 @@
         <input class="control" type="text" name="estado" id="estn" placeholder="Ingrese el estado de la novedad">
          
         <input class="btninsN" type="button" value="Registrar">
+        <input class="actu" type="button" value="Actualizar">
             
         </section>
+        
+        <table class="table" id="res">
+        
+        </table>
+        
     </body>
 </html>
