@@ -8,13 +8,16 @@ public class Usuario {
     private String Rol_Usuario;
     private String User_Usuario;
     private String Clave_Usuario;
+    private String Imagen_Usuario;
 
-    public Usuario(Integer Codigo_Usuario, String Rol_Usuario, String User_Usuario, String Clave_Usuario) {
+    public Usuario(Integer Codigo_Usuario, String Rol_Usuario, String User_Usuario, String Clave_Usuario, String Imagen_Usuario) {
         this.Codigo_Usuario = Codigo_Usuario;
         this.Rol_Usuario = Rol_Usuario;
         this.User_Usuario = User_Usuario;
         this.Clave_Usuario = Clave_Usuario;
+        this.Imagen_Usuario = Imagen_Usuario;
     }
+
 
     public Usuario() {
        
@@ -50,6 +53,14 @@ public class Usuario {
 
     public void setClave_Usuario(String Clave_Usuario) {
         this.Clave_Usuario = Clave_Usuario;
+    }
+
+    public String getImagen_Usuario() {
+        return Imagen_Usuario;
+    }
+
+    public void setImagen_Usuario(String Imagen_Usuario) {
+        this.Imagen_Usuario = Imagen_Usuario;
     }
     
     

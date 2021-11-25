@@ -4,15 +4,20 @@
  */
 package controlador;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
 import static jdk.nashorn.tools.ShellFunctions.input;
 import modelo.Usuario;
@@ -23,6 +28,7 @@ import modelo.UsuarioDao;
  * @author jonat
  */
 @WebServlet(name = "Servlet_Usuario", urlPatterns = {"/Servlet_Usuario"})
+@MultipartConfig
 public class Servlet_Usuario extends HttpServlet {
 
     /**
@@ -68,49 +74,79 @@ public class Servlet_Usuario extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        JOptionPane.showMessageDialog(null, "Ser en ser ");
-        
-        String  u, c, r;
+        JOptionPane.showMessageDialog(null, "Ser");
+        JOptionPane.showMessageDialog(null, "  El nombre");
+        if(request.getParameter("op").equals("ins")){
         int d;
-        
-        if(request.getParameter("dato").equals("insertar")){
-        
-        int y;
+        Boolean y;
+        String r, u, c;
 
-        d = Integer.parseInt(request.getParameter("d"));
-        u = request.getParameter("u");
-        c = getMD5(request.getParameter("c"));
-        r = request.getParameter("r");
+        d = Integer.parseInt(request.getParameter("Documento"));
+        r = request.getParameter("rol");
+        u = request.getParameter("usuario");
+        c = getMD5(request.getParameter("Nombres"));
+        Part i = request.getPart("img");
+
+        JOptionPane.showMessageDialog(null, u + "  El Usuario");
         
-        
-        JOptionPane.showMessageDialog(null, d+u+c+r);
+        String nomfoto=i.getSubmittedFileName();
+            
+        String nombre=u+""+nomfoto;
+        String Url="C:\\Users\\jonat\\Documents\\GitHub\\Cementerio\\web\\imagenes\\"+nombre;
+        String Url2="imagenes/"+nombre;
+            
+        InputStream file=i.getInputStream();
+        File f=new File(Url);
+        FileOutputStream sal=new FileOutputStream(f);
+        int num=file.read();
+        while(num != -1){
+            sal.write(num);
+            num=file.read();
+        }
 
-        Usuario usuario = new Usuario(d, r, u, c);
-        UsuarioDao usudao = new UsuarioDao();
+        Usuario usuario = new Usuario(d, r, u, c, Url2);
+        UsuarioDao usdao = new UsuarioDao();
 
-        y = usudao.Insertar_Usuario(usuario);
-        if (y > 0) {
-
-            response.sendRedirect("Usuario.jsp");
+        y = usdao.Insertar_Usuario(usuario);
+        if (y) {
             JOptionPane.showMessageDialog(null, " guardados");
+            response.sendRedirect("Usuario.jsp");
         } else {
-            JOptionPane.showMessageDialog(null, "danos no guardados");
+            JOptionPane.showMessageDialog(null, " Fail");
             response.sendRedirect("Usuario.jsp");
         }
         }
         if(request.getParameter("dato").equals("actualizar")){
-            boolean dat;
-            d = Integer.parseInt(request.getParameter("d"));
-            u = request.getParameter("u");
-            c = getMD5(request.getParameter("c"));
-            r = request.getParameter("r");
+            int d;
+            Boolean dat;
+            String r, u, c;
+
+            d = Integer.parseInt(request.getParameter("Documento"));
+            r = request.getParameter("rol");
+            u = request.getParameter("usuario");
+            c = getMD5(request.getParameter("Nombres"));         
+            Part i = request.getPart("img");
+
+            JOptionPane.showMessageDialog(null, u + "  El Usuario");
         
-        
-            JOptionPane.showMessageDialog(null, d+u+c+r);
+            String nomfoto=i.getSubmittedFileName();
             
-            Usuario usuario = new Usuario(d,u,c,r);
-            UsuarioDao actdao=new UsuarioDao();
-            dat=actdao.actualizarusuario(usuario);
+            String nombre=u+""+nomfoto;
+            String Url="C:\\Users\\jonat\\Documents\\GitHub\\Cementerio\\web\\imagenes"+nombre;
+            String Url2="imagenes/"+nombre;
+            
+            InputStream file=i.getInputStream();
+            File f=new File(Url);
+            FileOutputStream sal=new FileOutputStream(f);
+            int num=file.read();
+            while(num != -1){
+                sal.write(num);
+                num=file.read();
+            }
+
+            Usuario usuario = new Usuario(d, r, u, c, Url2);
+            UsuarioDao usdao = new UsuarioDao();
+            dat=usdao.actualizarusuario(usuario);
             if(dat){
                 JOptionPane.showMessageDialog(null, "datos actualizados");
                 response.sendRedirect("Usuario.jsp");

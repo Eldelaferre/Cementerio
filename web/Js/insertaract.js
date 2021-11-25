@@ -60,7 +60,7 @@ $(document).ready(function(){
                     for(let i of res){
                         tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Codigo" id="Codigo" value="${i.codigo}"></td>
                                                 <td><input class="doc" type="text" name="Documento" id="Documento" value="${i.codempleado}"></td>
-                                                <td><input class="fec" type="text" name="Fecha" id="Fecha" value="${i.fecha}"></td>
+                                                <td><input class="fec" type="text" name="Fecha" id="actividadfecha" value="${i.fecha}"></td>
                                                 <td><input class="des" type="text" name="descripcion" id="descripcion" value="${i.descripcion}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                         </tr></tbody>`;
