@@ -31,6 +31,9 @@ public class UsuarioDao {
             ps.setString(5, usu.getImagen_Usuario());
             
             x = ps.executeUpdate();
+            if(x>0){
+                r=true;
+            }
 
             JOptionPane.showMessageDialog(null, "Datos ok");
             JOptionPane.showMessageDialog(null, "Debe diligenciar el formulario de empleado para poder ingresar");
