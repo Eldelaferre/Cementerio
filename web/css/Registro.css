@@ -20,8 +20,14 @@ body{
 h1{
     text-align: center;
     font-weight: 700;
-}
+    
+} 
+    
+.sec_log_uno{
+    margin-top: 200px;
+    }
 form{
+    width: 20%;
     background: #fff;
     padding: 40px 0;
     margin: auto;
@@ -29,7 +35,7 @@ form{
     border-radius: 10px;
 }
 .from{
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 form .grupo{
