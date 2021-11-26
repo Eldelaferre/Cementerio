@@ -28,7 +28,6 @@ import modelo.UsuarioDao;
  * @author jonat
  */
 @WebServlet(name = "Servlet_Usuario", urlPatterns = {"/Servlet_Usuario"})
-@MultipartConfig
 public class Servlet_Usuario extends HttpServlet {
 
     /**
@@ -74,41 +73,30 @@ public class Servlet_Usuario extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
+        
         JOptionPane.showMessageDialog(null, "Ser");
         JOptionPane.showMessageDialog(null, "  El nombre");
-        if(request.getParameter("op").equals("ins")){
-        int d;
-        Boolean y;
-        String r, u, c;
 
-        d = Integer.parseInt(request.getParameter("Documento"));
-        r = request.getParameter("rol");
-        u = request.getParameter("usuario");
-        c = getMD5(request.getParameter("Nombres"));
-        Part i = request.getPart("img");
-
-        JOptionPane.showMessageDialog(null, u + "  El Usuario");
+        int c;
+        String n, r, u, cl;
         
-        String nomfoto=i.getSubmittedFileName();
+        if(request.getParameter("dato").equals("insertar")){
             
-        String nombre=u+""+nomfoto;
-        String Url="C:\\Users\\jonat\\Documents\\GitHub\\Cementerio\\web\\imagenes\\"+nombre;
-        String Url2="imagenes/"+nombre;
-            
-        InputStream file=i.getInputStream();
-        File f=new File(Url);
-        FileOutputStream sal=new FileOutputStream(f);
-        int num=file.read();
-        while(num != -1){
-            sal.write(num);
-            num=file.read();
-        }
+        int y;
 
-        Usuario usuario = new Usuario(d, r, u, c, Url2);
+        c = Integer.parseInt(request.getParameter("c"));
+        n = request.getParameter("d");
+        r = request.getParameter("n");
+        u = request.getParameter("di");
+        cl = request.getParameter("t");
+
+        JOptionPane.showMessageDialog(null, "El nombre "+n);
+
+        Usuario usuario = new Usuario(c, n, r, u, cl);
         UsuarioDao usdao = new UsuarioDao();
 
         y = usdao.Insertar_Usuario(usuario);
-        if (y) {
+        if (y > 0) {
             JOptionPane.showMessageDialog(null, " guardados");
             response.sendRedirect("Usuario.jsp");
         } else {
@@ -117,36 +105,19 @@ public class Servlet_Usuario extends HttpServlet {
         }
         }
         if(request.getParameter("dato").equals("actualizar")){
-            int d;
-            Boolean dat;
-            String r, u, c;
-
-            d = Integer.parseInt(request.getParameter("Documento"));
-            r = request.getParameter("rol");
-            u = request.getParameter("usuario");
-            c = getMD5(request.getParameter("Nombres"));         
-            Part i = request.getPart("img");
-
-            JOptionPane.showMessageDialog(null, u + "  El Usuario");
-        
-            String nomfoto=i.getSubmittedFileName();
+            boolean dat;
+            c = Integer.parseInt(request.getParameter("c"));
+            n = request.getParameter("d");
+            r = request.getParameter("n");
+            u = request.getParameter("di");
+            cl = request.getParameter("t");
             
-            String nombre=u+""+nomfoto;
-            String Url="C:\\Users\\jonat\\Documents\\GitHub\\Cementerio\\web\\imagenes"+nombre;
-            String Url2="imagenes/"+nombre;
-            
-            InputStream file=i.getInputStream();
-            File f=new File(Url);
-            FileOutputStream sal=new FileOutputStream(f);
-            int num=file.read();
-            while(num != -1){
-                sal.write(num);
-                num=file.read();
-            }
 
-            Usuario usuario = new Usuario(d, r, u, c, Url2);
+            JOptionPane.showMessageDialog(null,"El nombre "+n);
+
+            Usuario Usuario = new Usuario(c, n, r, u, cl);
             UsuarioDao usdao = new UsuarioDao();
-            dat=usdao.actualizarusuario(usuario);
+            dat=usdao.actualizarusuario(Usuario);
             if(dat){
                 JOptionPane.showMessageDialog(null, "datos actualizados");
                 response.sendRedirect("Usuario.jsp");

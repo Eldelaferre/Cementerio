@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="css/Styles.css">
         <link rel="stylesheet" href="css/tabla.css">
         <script src="Js/jquery-3.6.0.min.js"></script>
-        
+        <script src="Js/Insertar_Usuario.js"></script>
 
         <title>Formulario Registro Usuario</title>
     </head>
@@ -59,6 +59,7 @@
 
                 <h4>Formulario Registro Usuario</h4>
                 <input class="control" id="doc" type="text" name="Documento" placeholder="Ingrese el Documento">
+                <input class="control" id="nom" type="text" name="Nombre" placeholder="Ingrese el Nombre de usuario">
                 <select class="control" id="rol" name="rol">
                     <option value=""> Seleccionar Rol</option>
 
@@ -69,9 +70,8 @@
                 </select>  
                 <input class="control" id="usu" type="text" name="usuario" placeholder="Ingrese su Usuario">
                 <input class="control" id="cla" type="text" name="Nombres" placeholder="Ingrese su Contraseña">
-                <input class="control" type="file" name="img" >
 
-                <input class="boton btn_ingreso_Usuario" type="submit" id="btn_ingreso_Usuario" value="Registrar">
+                <input class="boton btn_ingreso_Usuario" type="button" id="btn_ingreso_Usuario" value="Registrar">
                 <input class="actu" type="button" id="btnact" value="Actualizar">
 
             </form>
@@ -84,5 +84,4 @@
     </table>
 
     </body>
-    <script src="Js/imagen.js"></script>
 </html>

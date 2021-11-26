@@ -96,6 +96,16 @@ body{
     border: 0;
     border-bottom: 1px solid transparent;
 }
+.cor{
+    color:black;
+    font-weight: bold;
+    font-family: 'calibri';
+    font-size: 18px;
+    width: 175px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
 .fec{
     color:black;
     font-weight: bold;

@@ -19,7 +19,7 @@ public class loginDao {
     public ArrayList<login> LoginDao(login lo){
         ArrayList<login> lista =new ArrayList<>();
         try {
-            ps=cnn.prepareStatement("select Usua_codigo,Usua_rol,Usua_user,Usua_clave,Emple_nombre from Tbusuario inner join Tbempleado on (Emple_codigo=Usua_codigo) where Usua_user=? && Usua_clave=?");
+            ps=cnn.prepareStatement("select Usua_codigo,Usua_rol,Usua_user,Usua_clave,Usua_nombre from Tbusuario where Usua_user=? && Usua_clave=?");
             ps.setString(1, lo.getUsuario());
             ps.setString(2, lo.getClave());
             rs=ps.executeQuery();

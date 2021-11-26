@@ -4,13 +4,18 @@
  */
 package controlador;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
 import modelo.actividad;
 import modelo.actividadDao;
@@ -22,6 +27,7 @@ import modelo.empleadoDao;
  * @author jonat
  */
 @WebServlet(name = "Servletempleado", urlPatterns = {"/Servletempleado"})
+@MultipartConfig
 public class Servletempleado extends HttpServlet {
 
     /**
@@ -67,54 +73,90 @@ public class Servletempleado extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        JOptionPane.showMessageDialog(null, "en el servlet");
-        String t,n,d,te,e;
+        JOptionPane.showMessageDialog(null, "Ser");
+        JOptionPane.showMessageDialog(null, "  El nombre");
+        if(request.getParameter("op").equals("ins")){
         int c;
-        if(request.getParameter("dato").equals("insertar")){
-            int y;
-            c=Integer.parseInt(request.getParameter("c"));
-            t=request.getParameter("t");
-            n=request.getParameter("n");
-            d=request.getParameter("d");
-            te=request.getParameter("te");
-            e=request.getParameter("e");
+        Boolean y;
+        String t, n, d, te, e;
+
+        c=Integer.parseInt(request.getParameter("Documento"));
+        t=request.getParameter("tipo");
+        n=request.getParameter("Nombres");
+        d=request.getParameter("Direccion");
+        te=request.getParameter("Telefono");
+        e=request.getParameter("correo");
+        Part i = request.getPart("img");      
+
+        JOptionPane.showMessageDialog(null,t+n+d+te+e);
+        
+        String nomfoto=i.getSubmittedFileName();
             
-            JOptionPane.showMessageDialog(null,t+n+d+te+e);
+        String nombre=n+""+nomfoto;
+        String Url="C:\\Users\\jonat\\Documents\\GitHub\\Cementerio\\web\\imagenes\\"+nombre;
+        String Url2="imagenes/"+nombre;
             
-            empleado empleado = new empleado(c,t,n,d,te,e);
-            empleadoDao empdao=new empleadoDao();
-            y=empdao.insertarempleado(empleado);
-            if(y>0){
-                response.sendRedirect("Empleado.jsp");
-                JOptionPane.showMessageDialog(null, "datos guardados");
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "datos no guardados");
-                response.sendRedirect("Empleado.jsp");
-            }
+        InputStream file=i.getInputStream();
+        File f=new File(Url);
+        FileOutputStream sal=new FileOutputStream(f);
+        int num=file.read();
+        while(num != -1){
+            sal.write(num);
+            num=file.read();
+        }
+
+        empleado empleado = new empleado(c, t, n, d, te, e, Url2);
+        empleadoDao emdao = new empleadoDao();
+
+        y = emdao.insertarempleado(empleado);
+        if (y) {
+            JOptionPane.showMessageDialog(null, " guardados");
+            response.sendRedirect("Empleado.jsp");
+        } else {
+            JOptionPane.showMessageDialog(null, " Fail");
+            response.sendRedirect("Empleado.jsp");
+        }
         }
         if(request.getParameter("dato").equals("actualizar")){
             boolean dat;
+            String t, n, d, te, e;
+            int c;
             c=Integer.parseInt(request.getParameter("c"));
             t=request.getParameter("t");
             n=request.getParameter("n");
             d=request.getParameter("d");
             te=request.getParameter("te");
             e=request.getParameter("e");
+            Part i = request.getPart("img");      
+
+        JOptionPane.showMessageDialog(null,t+n+d+te+e);
+        
+        String nomfoto=i.getSubmittedFileName();
             
-            JOptionPane.showMessageDialog(null,t+n+d+te+e);
+        String nombre=n+""+nomfoto;
+        String Url="C:\\Users\\jonat\\Documents\\GitHub\\Cementerio\\web\\imagenes\\"+nombre;
+        String Url2="imagenes/"+nombre;
             
-            empleado empleado = new empleado(c,t,n,d,te,e);
-            empleadoDao empdao=new empleadoDao();
-            dat=empdao.actualizarempleado(empleado);
-            if(dat){
-                JOptionPane.showMessageDialog(null, "datos actualizados");
-                response.sendRedirect("empleado.jsp");
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
-                response.sendRedirect("empleado.jsp");
-            }
+        InputStream file=i.getInputStream();
+        File f=new File(Url);
+        FileOutputStream sal=new FileOutputStream(f);
+        int num=file.read();
+        while(num != -1){
+            sal.write(num);
+            num=file.read();
+        }
+
+        empleado empleado = new empleado(c, t, n, d, te, e, Url2);
+        empleadoDao emdao = new empleadoDao();
+
+        dat = emdao.actualizarempleado(empleado);
+        if (dat) {
+            JOptionPane.showMessageDialog(null, " guardados");
+            response.sendRedirect("Empleado.jsp");
+        } else {
+            JOptionPane.showMessageDialog(null, " Fail");
+            response.sendRedirect("Empleado.jsp");
+        }
         }
     }
 

@@ -8,17 +8,19 @@ public class empleado {
     private String direccion;
     private String telefono;
     private String email;
+    private String imagen;
 
     public empleado() {
     }
 
-    public empleado(int codigo, String tipo, String nombre, String direccion, String telefono, String email) {
+    public empleado(int codigo, String tipo, String nombre, String direccion, String telefono, String email, String imagen) {
         this.codigo = codigo;
         this.tipo = tipo;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
+        this.imagen = imagen;
     }
 
     public int getCodigo() {
@@ -67,6 +69,14 @@ public class empleado {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
     
     

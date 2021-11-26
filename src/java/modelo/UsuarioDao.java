@@ -19,41 +19,39 @@ public class UsuarioDao {
     ResultSet rs;
     Usuario us;
     
-    public boolean Insertar_Usuario(Usuario usu) {
+    public int Insertar_Usuario(Usuario usu) {
         int x=0;
-        boolean r=false;
+        
         try {
             ps = cnn.prepareStatement("INSERT INTO tbusuario VALUES(?,?,?,?,?)");
             ps.setInt(1, usu.getCodigo_Usuario());
-            ps.setString(2, usu.getRol_Usuario());
-            ps.setString(3, usu.getUser_Usuario());
-            ps.setString(4, usu.getClave_Usuario());
-            ps.setString(5, usu.getImagen_Usuario());
+            ps.setString(2, usu.getNombre_Usuario());
+            ps.setString(3, usu.getRol_Usuario());
+            ps.setString(4, usu.getUser_Usuario());
+            ps.setString(5, usu.getClave_Usuario());
+            
             
             x = ps.executeUpdate();
-            if(x>0){
-                r=true;
-            }
+            
 
             JOptionPane.showMessageDialog(null, "Datos ok");
-            JOptionPane.showMessageDialog(null, "Debe diligenciar el formulario de empleado para poder ingresar");
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error al insertar" + e);
         }
-        return r;
+        return x;
 
     }
     public boolean actualizarusuario(Usuario usuactu){
         int x=0;
         boolean r=false;
         try {
-            ps=cnn.prepareStatement("update tbusuario set Usua_rol=?,Usua_user=?,Usua_clave=?,Usua_image=? where Usua_codigo=?");
+            ps=cnn.prepareStatement("update tbusuario set Usua_nombre=?,Usua_rol=?,Usua_user=?,Usua_clave=? where Usua_codigo=?");
             
-            ps.setString(1, usuactu.getRol_Usuario());
-            ps.setString(2, usuactu.getUser_Usuario());
-            ps.setString(3, usuactu.getClave_Usuario());
-            ps.setString(4, usuactu.getImagen_Usuario());
+            ps.setString(1, usuactu.getNombre_Usuario());
+            ps.setString(2, usuactu.getRol_Usuario());
+            ps.setString(3, usuactu.getUser_Usuario());
+            ps.setString(4, usuactu.getClave_Usuario());
             ps.setInt(5, usuactu.getCodigo_Usuario());
 
             x=ps.executeUpdate();
