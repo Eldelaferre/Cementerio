@@ -91,6 +91,9 @@ public class Servletlogin extends HttpServlet {
                     sesion.setAttribute("rosesion",u);
                     sesion.setAttribute("varsesion",datlo.getNombre());
                     
+                    JOptionPane.showMessageDialog(null, datlo.getRol());
+                        JOptionPane.showMessageDialog(null, datlo.getCodigo());
+                    
                     if(datlo.getRol().equals("administrador")){
                         JOptionPane.showMessageDialog(null, datlo.getRol());
                         JOptionPane.showMessageDialog(null, datlo.getCodigo());
@@ -99,7 +102,7 @@ public class Servletlogin extends HttpServlet {
                             response.sendRedirect("EspacioEmpleado.jsp");
                         
                     }
-                    else if(datlo.getRol().equals("trabajador")){
+                    else if(datlo.getRol().equals("Empleado")){
                         JOptionPane.showMessageDialog(null, datlo.getRol());
                         JOptionPane.showMessageDialog(null, datlo.getCodigo());
                         sesion.setAttribute("rol",datlo.getRol());
@@ -114,6 +117,8 @@ public class Servletlogin extends HttpServlet {
                         sesion.setAttribute("Codigo", datlo.getCodigo());
                             response.sendRedirect("index.jsp");
                         
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Error Al iniciar sesion");
                     }
             }
             }

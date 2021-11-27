@@ -32,7 +32,7 @@
 
                 <nav>
                     <ul>
-                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Nosotros.jsp">Nosotros</a></li>
                         <li><a href="">Servicios</a></li>
                         <li><a href="">Aliados</a></li>
                         <li><a href="">Contacto</a></li>
@@ -60,7 +60,7 @@
 
                         </div>
 
-                        <button type="submit" name="btnlogin">Ingresar</button>
+                        <button <input type="submit" name="btnlogin">Ingresar  </button>
 
                         <a class="visitante" href="Usuario.jsp">No tengo cuenta, ir a Registro</a>
                     </div>
