@@ -1,89 +1,105 @@
-$(document).ready(function () {
-
+$(document).ready(function(){
+    
+    alert("en el jsp")
     consultar();
-    $('.btn_ingreso_Usuario').on('click', function () {
-        Insertar();
+    
+    
+    
+    $('#boton btn_ingreso_Usuario').on('click',function(){
+        
+        insertar();
+        
     });
     
+    $('.actu').on('click',function(){
+        
+        actualizar();
+        
+    });
+    
+    function insertar(){
+        alert("en insertar")
+        let doc=$('#doc').val();
+        let nom=$('#nom').val();
+        let rol=$('#rol').val();
+        let usu=$('#usu').val();
+        let cla=$('#cla').val();
 
-    function Insertar() {
-        let doc = $('#doc').val();
-        let rol = $('#rol').val();
-        let usu = $('#usu').val();
-        let cla = $('#cla').val();
-
+        
+        alert("Documento "+doc+" Rol "+rol);
+        
         $.ajax({
-            type: "post",
-            url: "Servlet_Usuario",
-            data: {dato: "Insertar", d: doc, r: rol, u: usu, c: cla},
-            success: function (res) {
-                if (res) {
-                    alert("Datos Guardados");
-                    consultar();
-                }
-            }
+            
+            type:"POST",
+            url:"Servlet_Usuario",
+            data:{dato:"insertar",d:doc,n:nom,r:rol,u:usu,c:cla},
+                success:function(res){
+                    if(res){
+                        alert("datos guardados");
+                        consultar();
+                   }
+               }
         });
-
     }
-    ;
+    
 
-    function consultar() {
-        alert("En consultar");
-
+    function consultar(){
+        alert("en consultar");
+        
         $.ajax({
-            type: "post",
-            url: "Servlet_Consultar_Usuario",
+            
+            
+            type:"POST",
+            url:"Servletconsultausu",
             dataType: 'json',
-            success: function (res) {
-                console.log(res);
-                let tabla = document.querySelector("#tablita");
-                tabla.innerHTML = '';
-                tabla.innerHTML = `<tr>
-                    <th>Documento</th>
-                    <th>Rol</th>
-                    <th>Usuario</th>                  
-                    <th>Clave</th>
-                </tr> `;
-                for (let i of res) {
-
-                    tabla.innerHTML += `<tr>
-                        <td><input class="control doc" id="doc" type="text" name="Documento" id="Documento" value="${i.Codigo_Usuario}"readonly></td>
-                        <td><input type="text" class="control rol" id="rol" value="${i.Rol_Usuario}"></td>
-                        <td><input class="control usu" id="usu" type="text" name="usuario" id="usuario" value="${i.User_Usuario}"></td>
-                        <td><input class="control cla" id="cla" type="password" name="Nombres" id="nombres" value="${i.Clave_Usuario}"></td>
-                        <td><input type="button" name="btn_Actualizar_Usuario" class="btn_Actualizar_Usuario" id="btn_Actualizar_Usuario" value="Actualizar"></td>
-                        <input type="button" name="btn_Actualizar_Usuario" class="btn_Actualizar_Usuario" id="btn_Actualizar_Usuario" value="Actualizar">
-
-                    </tr>`;
+           
+                success:function(res){
+                    console.log(res);
+                    let tabla=document.querySelector('#res');
+                    tabla.innerHTML='';
+                    tabla.innerHTML=`<thead><tr><th>Documento</th>
+                                        <th>Nombre</th>
+                                        <th>Rol</th>
+                                        <th>Usuario</th>
+                                        <th>Clave</th>
+                                        <th>Accion</th>
+                                    </tr></thead>`;
+                    for(let i of res){
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Documento" id="doc" value="${i.Codigo_Usuario}"></td>
+                                                <td><input class="doc" type="text" name="nom" id="nom" value="${i.Nombre_Usuario}"></td>
+                                                <td><input class="doc" type="text" name="rol" id="rol" value="${i.Rol_Usuario}"></td>
+                                                <td><input class="doc" type="text" name="Usuario" id="Usuario" value="${i.User_Usuario}"></td>
+                                                <td><input class="des" type="text" name="Clave" id="Nombres" value="${i.Clave_Usuario}"></td>
+                                                <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
+                                        </tr></tbody>`;
+                    }
                 }
-            }
         });
-
     }
-    ;
+    
+    function actualizar(){
+        alert("en actualizar")
+        let doc=$('#doc').val();
+        let nom=$('#nom').val();
+        let rol=$('#rol').val();
+        let usu=$('#usu').val();
+        let cla=$('#cla').val();
 
-    function Actualizar() {
-        alert("En Actualizar");
-
-        let doc = $('#doc').val();
-        let rol = $('#rol').val();
-        let usu = $('#usu').val();
-        let cla = $('#cla').val();
-
+        
+        alert("Documento "+doc+" Rol "+rol);
+        
         $.ajax({
-            type: "get",
-            url: "Servlet_Actualizar_Usuario",
-            data: {dato: "Insertar", d: doc, r: rol, u: usu, c: cla},
-            success: function (res) {
-                if (res) {
-                    alert("Datos Guardados");
-                    consultar();
+            
+            type:"POST",
+            url:"Servlet_Usuario",
+            data:{dato:"actualizar",d:doc,n:nom,r:rol,u:usu,c:cla},
+                success:function(res){
+                    if(res){
+                        alert("datos actualizados");
+                        consultar();
+                    }
                 }
-            }
         });
-
     }
-    ;
-
-
+    
 });

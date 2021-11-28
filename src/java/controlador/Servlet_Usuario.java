@@ -1,24 +1,31 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package controlador;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
+import static jdk.nashorn.tools.ShellFunctions.input;
 import modelo.Usuario;
 import modelo.UsuarioDao;
 
 /**
  *
- * @author stild
+ * @author jonat
  */
 @WebServlet(name = "Servlet_Usuario", urlPatterns = {"/Servlet_Usuario"})
 public class Servlet_Usuario extends HttpServlet {
@@ -66,34 +73,76 @@ public class Servlet_Usuario extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        JOptionPane.showMessageDialog(null, "Ser en ser ");
         
-        String  u, c, r;
-        int d, y;
+        JOptionPane.showMessageDialog(null, "Ser");
+        JOptionPane.showMessageDialog(null, "  El nombre");
 
-        d = Integer.parseInt(request.getParameter("d"));
-        u = request.getParameter("u");
-        c = request.getParameter("c");
-        r = request.getParameter("r");
+        int c;
+        String n, r, u, cl;
         
-        
-        JOptionPane.showMessageDialog(null, d+u+c+r);
+        if(request.getParameter("dato").equals("insertar")){
+            
+        int y;
 
-        Usuario usuario = new Usuario(d, r, u, c);
-        UsuarioDao usudao = new UsuarioDao();
+        c = Integer.parseInt(request.getParameter("c"));
+        n = request.getParameter("d");
+        r = request.getParameter("n");
+        u = request.getParameter("di");
+        cl = request.getParameter("t");
 
-        y = usudao.Insertar_Usuario(usuario);
+        JOptionPane.showMessageDialog(null, "El nombre "+n);
+
+        Usuario usuario = new Usuario(c, n, r, u, cl);
+        UsuarioDao usdao = new UsuarioDao();
+
+        y = usdao.Insertar_Usuario(usuario);
         if (y > 0) {
-
-            response.sendRedirect("Usuario.jsp");
             JOptionPane.showMessageDialog(null, " guardados");
-        } else {
-            JOptionPane.showMessageDialog(null, "danos no guardados");
             response.sendRedirect("Usuario.jsp");
+        } else {
+            JOptionPane.showMessageDialog(null, " Fail");
+            response.sendRedirect("Usuario.jsp");
+        }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c = Integer.parseInt(request.getParameter("c"));
+            n = request.getParameter("d");
+            r = request.getParameter("n");
+            u = request.getParameter("di");
+            cl = request.getParameter("t");
+            
+
+            JOptionPane.showMessageDialog(null,"El nombre "+n);
+
+            Usuario Usuario = new Usuario(c, n, r, u, cl);
+            UsuarioDao usdao = new UsuarioDao();
+            dat=usdao.actualizarusuario(Usuario);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("Usuario.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("Usuario.jsp");
+            }
         }
         
     }
-
+        public String getMD5(String input){
+        try {
+            MessageDigest md=MessageDigest.getInstance("MD5");
+            byte[] encBytes=md.digest(input.getBytes());
+            BigInteger numero=new BigInteger(1, encBytes);
+            String encString=numero.toString(16);
+            while(encString.length()<32){
+                encString="0"+encString;
+            }
+         return encString; 
+         } catch (Exception e) {
+             throw new RuntimeException(e);
+        }
+    }
     /**
      * Returns a short description of the servlet.
      *

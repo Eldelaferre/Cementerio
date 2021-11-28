@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package controlador;
 
@@ -14,15 +13,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Usuario;
-import modelo.UsuarioDao;
+import javax.swing.JOptionPane;
+import modelo.tumba;
+import modelo.tumbaDao;
 
 /**
  *
- * @author stild
+ * @author jonat
  */
-@WebServlet(name = "Servlet_Consultar_Usuario", urlPatterns = {"/Servlet_Consultar_Usuario"})
-public class Servlet_Consultar_Usuario extends HttpServlet {
+@WebServlet(name = "Servletconsultatum", urlPatterns = {"/Servletconsultatum"})
+public class Servletconsultatum extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,14 +36,14 @@ public class Servlet_Consultar_Usuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        JOptionPane.showMessageDialog(null, "en el servlet consultar");
         PrintWriter out = response.getWriter();
-        
-        ArrayList<Usuario>arr=new ArrayList<>();
-        UsuarioDao udao=new UsuarioDao();
-        arr=udao.Consulta_Gen_Usuarios();
+        ArrayList<tumba> arr=new ArrayList<>();
+        tumba lo=new tumba();
+        tumbaDao tumdao=new tumbaDao();
+        arr=tumdao.consultageneraltumba();
         Gson gson=new Gson();
-        out.println(gson.toJson(arr) + "   ");
-        
+        out.println(gson.toJson(arr));
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

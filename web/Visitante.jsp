@@ -14,10 +14,11 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/Styles.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/Insertar_Visitante.js"></script>
+        <link rel="stylesheet" href="css/tabla.css">
+        <script src="Js/jquery-3.6.0.min.js"></script>
+        <script src="Js/Insertar_Visitante.js"></script>
 
-        <title>Fromulario Registro visitante</title>
+        <title>Formulario Registro visitante</title>
     </head>
     <body>
         <!-- Parte del menú-->
@@ -52,7 +53,7 @@
         <!-- Fin Menú-->
         <section class="registro">
             <form action=""  method="POST">
-                <h4>Fromulario Registro Visitante</h4>
+                <h4>Formulario Registro Visitante</h4>
                 <input class="control" type="text" name="codigo" id="cod" placeholder="Ingrese el codigo">
                 <input class="control" type="text" name="Documento" id="doc" placeholder="Ingrese el Documento">
                 <input class="control" type="text" name="nombre" id="nom" placeholder="Ingrese el nombre">
@@ -61,11 +62,16 @@
                 <input class="control" type="email" name="correo" id="cor" placeholder="Ingrese el correo">
 
 
-                <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="submit" value="Registrar">
+                <input class="boton btn_ingreso_Visitante" id="btn_ingreso_Visitante" type="button" value="Registrar">
+                <input class="actu" type="button" id="btnact" value="Actualizar">
 
             </form>
 
         </section>
-
+        
+        <table class="table" id="res">
+        
+        </table>
+        
     </body>
 </html>

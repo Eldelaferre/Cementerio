@@ -40,8 +40,7 @@
                     <li><a href="#sec2">Nosotros</a></li>
                     <li><a href="#sec3">Servicios</a></li>
                     <li><a href="#sec4">Aliados</a></li>
-                    <li><a href="Visitante.jsp">Contacto</a></li>
-                    <li><a href="PQR.jsp">PQR</a></li>
+                    <li><a href="">Contacto</a></li>
                     <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
@@ -79,7 +78,7 @@
                             manejo de basuras, además puede brindarle al administrador inconformidades en la visita.</p>
                         <br>
                         <ul>
-                            <li><a href="Nosotros.html">...Ver más</a></li>
+                            <li><a href="Nosotros.jsp">...Ver más</a></li>
                         </ul>
 
                     </div>
@@ -98,7 +97,7 @@
                     </div>
                     <div class="servi_sec_tres">
                         <div class="caja_serv">
-                            <a href="Estado.html">
+                            <a href="Estado.jsp">
                                 <img src="img/Consultar_tumba.jpg" alt="" width="300px">
                                 <h3>Consulta de Tumba de familares</h3>
                                 <br>
@@ -118,13 +117,13 @@
                             </a>
                         </div>
                         <div class="caja_serv">
-                            <a href="Comentario.html">
+                            <a href="comentarios.jsp">
                                 <img src="img/Opinar_cementerio.jpg" alt="" width="300px">
                                 <h3>Opinar sobre un cementerio</h3>
                                 <br>
                                 <br>
-                                <li><a href="Comentario.html">Opinar sobre una Tumba</a></li>
-                                <li><a href="Comentario.html">Opinar sobre un cementerio</a></li>
+                                <li><a href="comentarios.jsp">Opinar sobre una Tumba</a></li>
+                                <li><a href="comentarios.jsp">Opinar sobre un cementerio</a></li>
                             </a>
                         </div>
                     </div>

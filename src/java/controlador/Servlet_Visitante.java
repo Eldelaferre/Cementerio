@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package controlador;
 
@@ -18,7 +17,7 @@ import modelo.VisitanteDao;
 
 /**
  *
- * @author stild
+ * @author jonat
  */
 @WebServlet(name = "Servlet_Visitante", urlPatterns = {"/Servlet_Visitante"})
 public class Servlet_Visitante extends HttpServlet {
@@ -65,12 +64,16 @@ public class Servlet_Visitante extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
+        
         JOptionPane.showMessageDialog(null, "Ser");
         JOptionPane.showMessageDialog(null, "  El nombre");
 
-        int y, c, d;
+        int c, d;
         String n, di, t, co;
+        
+        if(request.getParameter("dato").equals("insertar")){
+            
+        int y;
 
         c = Integer.parseInt(request.getParameter("c"));
         d = Integer.parseInt(request.getParameter("d"));
@@ -92,7 +95,30 @@ public class Servlet_Visitante extends HttpServlet {
             JOptionPane.showMessageDialog(null, " Fail");
             response.sendRedirect("Visitante.jsp");
         }
+        }
+        if(request.getParameter("dato").equals("actualizar")){
+            boolean dat;
+            c = Integer.parseInt(request.getParameter("c"));
+            d = Integer.parseInt(request.getParameter("d"));
+            n = request.getParameter("n");
+            di = request.getParameter("di");
+            t = request.getParameter("t");
+            co = request.getParameter("co");
 
+            JOptionPane.showMessageDialog(null, n + "  El nombre");
+
+            Visitante visitante = new Visitante(c, d, n, di, t, co);
+            VisitanteDao vidao = new VisitanteDao();
+            dat=vidao.actualizarvisitante(visitante);
+            if(dat){
+                JOptionPane.showMessageDialog(null, "datos actualizados");
+                response.sendRedirect("Visitante.jsp");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "datos no fueron actualizados");
+                response.sendRedirect("Visitante.jsp");
+            }
+        }
     }
 
     /**

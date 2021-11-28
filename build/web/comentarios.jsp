@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Js/jquery-3.6.0.min.js"></script>
+    <script src="Js/insertarcomen.js"></script>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="/css/Styles.css">
+    <link rel="stylesheet" href="css/Styles.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Fromulario Registro Comentario</title>
+    <link rel="stylesheet" href="css/tabla.css">
+    <title>Formulario Registro Comentario</title>
 </head>
 <body>
     <!-- Parte del menú-->
 
     <header>
         <section>
-            <a href="index.html" id="Logo">Cementerios</a>
+            <a href="index.jsp" id="Logo">Cementerios</a>
 
             <label for="menu-1" class="menu">
                 <ul>
@@ -29,11 +32,11 @@
 
             <nav>
                 <ul>
-                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Nosotros.jsp">Nosotros</a></li>
                     <li><a href="">Servicios</a></li>
                     <li><a href="">Aliados</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="Login.html">Ingreso</a></li>
+                    <li><a href="Login.jsp">Ingreso</a></li>
                 </ul>
             </nav>
         </section>
@@ -41,7 +44,8 @@
 
     <!-- Fin Menú-->
     <section class="registro">
-        <h4>Fromulario Registro Comentario</h4>
+        <form action="" method="POST">
+        <h4>Formulario Registro Comentario</h4>
         <input class="control" type="text" name="codigo" id="codigo" placeholder="Ingrese el codigo">
         <input class="control" type="text" name="Codigov" id="Codigov" placeholder="Ingrese el codigo visitante">
         <p>Fecha del comentario</p>
@@ -49,8 +53,15 @@
         <input class="control" type="text" name="descripcion" id="descripcion" placeholder="Ingrese el comentario">
         
         <input class="boton" type="submit" value="Registrar">
-
+        <input class="actu" type="button" id="boton"value="Actualizar">
+        </form>
     </section>
+    
+    
+    <table class="table" id="res">
+        
+    </table>
+    
     
 </body>
 </html>
