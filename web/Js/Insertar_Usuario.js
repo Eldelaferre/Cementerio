@@ -5,7 +5,7 @@ $(document).ready(function(){
     
     
     
-    $('.boton btn_ingreso_Usuario').on('click',function(){
+    $('#boton btn_ingreso_Usuario').on('click',function(){
         
         insertar();
         
@@ -50,7 +50,7 @@ $(document).ready(function(){
             
             
             type:"POST",
-            url:"Servlet_Usuario",
+            url:"Servletconsultausu",
             dataType: 'json',
            
                 success:function(res){
@@ -65,11 +65,11 @@ $(document).ready(function(){
                                         <th>Accion</th>
                                     </tr></thead>`;
                     for(let i of res){
-                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Documento" id="Documento" value="${i.Codigo_Usuario}"></td>
+                        tabla.innerHTML+=`<tbody><tr>  <td><input class="cod" type="text" name="Documento" id="doc" value="${i.Codigo_Usuario}"></td>
                                                 <td><input class="doc" type="text" name="nom" id="nom" value="${i.Nombre_Usuario}"></td>
                                                 <td><input class="doc" type="text" name="rol" id="rol" value="${i.Rol_Usuario}"></td>
                                                 <td><input class="doc" type="text" name="Usuario" id="Usuario" value="${i.User_Usuario}"></td>
-                                                <td><input class="des" type="text" name="Clave" id="Clave" value="${i.Clave_Usuario}"></td>
+                                                <td><input class="des" type="text" name="Clave" id="Nombres" value="${i.Clave_Usuario}"></td>
                                                 <td><input class="actu" type="button" id="boton"value="Actualizar"></td>
                                         </tr></tbody>`;
                     }
